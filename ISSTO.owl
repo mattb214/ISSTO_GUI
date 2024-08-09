@@ -1,0 +1,2359 @@
+@prefix : <http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO> .
+
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#tags
+rdfs:tags rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Airplane
+<http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Airplane> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf :Aircraft ;
+                                                                       rdfs:comment "An airplane, informally plane, is a fixed-wing aircraft that is propelled forward by thrust from a jet engine, propeller, or rocket engine." ;
+                                                                       rdfs:label "Airplane" ;
+                                                                       rdfs:seeAlso "https://en.wikipedia.org/wiki/Airplane" ;
+                                                                       rdfs:tags "Airplane, fixed-wing, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Airship
+<http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Airship> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf :Aircraft ;
+                                                                      rdfs:comment "An airship or dirigible balloon is a type of aerostat or lighter-than-air aircraft that can navigate through the air under its own power. Aerostats gain their lift from a lifting gas that is less dense than the surrounding air." ;
+                                                                      rdfs:label "Airship" ;
+                                                                      rdfs:seeAlso "https://en.wikipedia.org/wiki/Airship" ;
+                                                                      rdfs:tags "airship, balloon, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rocket
+<http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rocket> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf :Aircraft ;
+                                                                     rdfs:comment "A rocket is a vehicle that uses jet propulsion to accelerate without using the surrounding air. A rocket engine produces thrust by reaction to exhaust expelled at high speed. Rocket engines work entirely from propellant carried within the vehicle; therefore a rocket can fly in the vacuum of space. Rockets work more efficiently in a vacuum and incur a loss of thrust due to the opposing pressure of the atmosphere." ;
+                                                                     rdfs:label "Rocket" ;
+                                                                     rdfs:seeAlso "https://en.wikipedia.org/wiki/Rocket" ;
+                                                                     rdfs:tags "jet propulsion, rocket, thrust, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft
+<http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :Aircraft ;
+                                                                         rdfs:comment "A rotorcraft or rotary-wing aircraft is a heavier-than-air aircraft with rotary wings or rotor blades, which generate lift by rotating around a vertical mast. Several rotor blades mounted on a single mast are referred to as a rotor. The International Civil Aviation Organization (ICAO) defines a rotorcraft as \"supported in flight by the reactions of the air on one or more rotors\"" ;
+                                                                         rdfs:label "Rotorcraft" ;
+                                                                         rdfs:seeAlso "https://en.wikipedia.org/wiki/Rotorcraft" ;
+                                                                         rdfs:tags "rotor, propellers, rotor blades, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Alpha_Airspace
+<http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Alpha_Airspace> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf :Controlled_Airspace ;
+                                                                             rdfs:comment "Generally, that airspace from 18,000 feet MSL up to and including FL 600, including the airspace overlying the waters within 12 nautical miles off the coast of the 48 contiguous States and Alaska; and designated international airspace beyond 12 nautical miles off the coast of the 48 contiguous States and Alaska within areas of domestic radio navigational signal or ATC radar coverage, and within which domestic procedures are applied." ;
+                                                                             rdfs:label "Class Alpha Airspace" ;
+                                                                             rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                                                                             rdfs:tags "Class A airspace, controlled airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Bravo_Airspace
+<http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Bravo_Airspace> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf :Controlled_Airspace ;
+                                                                             rdfs:comment "Generally, that airspace from the surface to 10,000 feet MSL surrounding the nation's busiest airports in terms of IFR operations or passenger enplanements. The configuration of each Class B airspace area is individually tailored and consists of a surface area and two or more layers (some Class B airspace areas resemble upside‐down wedding cakes), and is designed to contain all published instrument procedures once an aircraft enters the airspace. An ATC clearance is required for all aircraft to operate in the area, and all aircraft that are so cleared receive separation services within the airspace. The cloud clearance requirement for VFR operations is “clear of clouds.”" ;
+                                                                             rdfs:label "Class Bravo Airspace" ;
+                                                                             rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                                                                             rdfs:tags "Class B airspace, controlled airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Charlie_Airspace
+<http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Charlie_Airspace> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf :Controlled_Airspace ;
+                                                                               rdfs:comment "Generally, that airspace from the surface to 4,000 feet above the airport elevation (charted in MSL) surrounding those airports that have an operational control tower, are serviced by a radar approach control, and that have a certain number of IFR operations or passenger enplanements. Although the configuration of each Class C airspace area is individually tailored, the airspace usually consists of a 5 NM radius core surface area that extends from the surface up to 4,000 feet above the airport elevation, and a 10 NM radius shelf area that extends no lower than 1,200 feet up to 4,000 feet above the airport elevation." ;
+                                                                               rdfs:label "Class Charlie Airspace" ;
+                                                                               rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                                                                               rdfs:tags "Class C airspace, controlled airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Delta_Airspace
+<http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Delta_Airspace> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf :Controlled_Airspace ;
+                                                                             rdfs:comment "Generally, Class D airspace extends upward from the surface to 2,500 feet above the airport elevation (charted in MSL) surrounding those airports that have an operational control tower. The configuration of each Class D airspace area is individually tailored and when instrument procedures are published, the airspace will normally be designed to contain the procedures." ;
+                                                                             rdfs:label "Class Delta Airspace" ;
+                                                                             rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                                                                             rdfs:tags "Class D airspace, controlled airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Echo_Airspace
+<http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Echo_Airspace> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf :Controlled_Airspace ;
+                                                                            rdfs:comment "Class E airspace is controlled airspace that is designated to serve a variety of terminal or en route purposes." ;
+                                                                            rdfs:label "Class Echo Airspace" ;
+                                                                            rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                                                                            rdfs:tags "Class E airspace, controlled airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#AIRMET
+:AIRMET rdf:type owl:Class ;
+        rdfs:subClassOf :Inflight_Aviation_Weather_Advisories ;
+        rdfs:comment """AIRMETs are a concise description of the occurrence or expected occurrence of specified en route weather phenomena that may affect the safety of aircraft operations, but at intensities lower than those which require the issuance of a SIGMET. They contain details about IFR conditions, extensive mountain obscuration, turbulence, strong surface winds, icing, and freezing levels. Unscheduled updates and corrections are issued as necessary.
+
+a) Are intended to inform all pilots, but especially Visual Flight Rules pilots and operators of sensitive aircraft, of potentially hazardous weather phenomena.
+
+b) Are issued on a scheduled basis every 6 hours, except every 8 hours in Alaska. Unscheduled updates and corrections are issued as necessary.
+
+c) Are intended for dissemination to all pilots in the preflight and en route phase of flight to enhance safety. En route AIRMETs are available over flight service frequencies. Over the contiguous U.S., AIRMETs are also available on equipment intended to display weather and other non-air traffic control-related flight information to pilots using the Flight Information Service-Broadcast (FIS-B). In Alaska and Hawaii, AIRMETs are broadcast on air traffic frequencies.
+
+d) Are issued for the contiguous U.S., Alaska, and Hawaii. No AIRMETs are issued for U.S. Oceanic FIRs in the Gulf of Mexico, Caribbean, Western Atlantic, and Pacific Oceans.""" ;
+        rdfs:label "AIRMET" ;
+        rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html#:~:text=There%20are%20four%20types%20of,Center%20Weather%20Advisory%20(CWA)." ;
+        rdfs:tags "en route, weather, phenomena, AIRMET, flight service" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#ASPM
+:ASPM rdf:type owl:Class ;
+      rdfs:subClassOf :Meteorological_Status_Data ;
+      rdfs:comment "The Aviation System Performance Metrics (ASPM) online access system provides data on flights to and from the ASPM airports (including the Core 30 and OEP 35 airports), and all flights by ASPM carriers, including flights by those carriers to international and domestic non-ASPM airports. All IFR and some VFR flights are included" ;
+      rdfs:label "ASPM" ;
+      rdfs:seeAlso "https://aspm.faa.gov/aspmhelp/index/Aviation_System_Performance_Metrics_(ASPM).html" ;
+      rdfs:tags "ASPM" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aborted_Landing_After_Touchdown
+:Aborted_Landing_After_Touchdown rdf:type owl:Class ;
+                                 rdfs:subClassOf :Landing ;
+                                 rdfs:comment "When an attempt is made to get airborne after touchdown (successful or not). This does not include the takeoff portion of a touch-and-go." ;
+                                 rdfs:label "Aborted Landing After Touchdown" ;
+                                 rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                                 rdfs:tags "abort, landing" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Accepted_Takeoff
+:Accepted_Takeoff rdf:type owl:Class ;
+                  rdfs:subClassOf :Takeoff ;
+                  rdfs:comment "From the application of takeoff power, through rotation and to an altitude of 35 feet above runway elevation or until gear-up selection, whichever comes first." ;
+                  rdfs:label "Accepted Takeoff" ;
+                  rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                  rdfs:tags "takeoff, accepted" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Acoustic
+:Acoustic rdf:type owl:Class ;
+          rdfs:subClassOf :Sensors ;
+          rdfs:comment "Acoustic sensors are devices designed to detect and measure sound waves or acoustic signals in the surrounding environment. These sensors convert sound waves into electrical signals, which can then be analyzed, processed, and used for various applications." ;
+          rdfs:label "Acoustic" ;
+          rdfs:seeAlso "https://www.aimil.com/blog/acoustic-sensors-applications-benefits-and-its-working/#:~:text=Acoustic%20sensors%20are%20devices%20designed,and%20used%20for%20various%20applications." ;
+          rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, acoustic, sound" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Active
+:Active rdf:type owl:Class ;
+        rdfs:subClassOf :Counter_Unmanned_Aircraft_Systems ;
+        owl:disjointWith :Passive ;
+        rdfs:comment "Active measures physically stop the detected drone" ;
+        rdfs:label "Active" ;
+        rdfs:seeAlso "https://informationsecuritybuzz.com/pros-cons-active-passive-drone-countermeasures/" ;
+        rdfs:tags "counter UAS, unmanned aerial system, counter, threat elimination, active" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aerobatics
+:Aerobatics rdf:type owl:Class ;
+            rdfs:subClassOf :Maneuvering ;
+            rdfs:comment "Any intentional maneuvering that exceeds 30 degrees of pitch attitude or 60 degrees of bank, or both, or abnormal acceleration (usually associated with air shows and military flight, or with related training flights)." ;
+            rdfs:label "Aerobatics" ;
+            rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+            rdfs:tags "maneuver, abnormal acceleration" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:comment "An airplane, helicopter, or other machine capable of flight." ;
+          rdfs:label "Aircraft" ;
+          rdfs:tags "Aircraft" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aircraft_Manufacturer
+:Aircraft_Manufacturer rdf:type owl:Class ;
+                       rdfs:subClassOf :Manufacturer ;
+                       rdfs:comment "Manufactures aircraft" ;
+                       rdfs:label "Aircraft Manufacturer" ;
+                       rdfs:tags "manufacturer, aircraft, company, business, production" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport
+:Airport rdf:type owl:Class ;
+         owl:equivalentClass <https://data.nasa.gov/ontologies/atmonto/NAS#Airport> ;
+         rdfs:subClassOf :METAR_Reporting_Station .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport_Data
+:Airport_Data rdf:type owl:Class ;
+              rdfs:subClassOf :Interval_Data ;
+              rdfs:comment "Represents a collection of airport data for a given time period, as reported by the FAA's ASPM system" ;
+              rdfs:label "Airport Data" ;
+              rdfs:tags "airport, FAA, data" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airspace
+:Airspace rdf:type owl:Class ;
+          rdfs:comment "Airspace is the portion of the atmosphere controlled by a country above its territory, including its territorial waters or, more generally, any specific three-dimensional portion of the atmosphere. It is not the same as outer space which is the expanse or space outside the Earth and aerospace which is the general term for Earth's atmosphere and the outer space within the planet's vicinity." ,
+                       "The United States airspace system's classification scheme is intended to maximize pilot flexibility within acceptable levels of risk appropriate to the type of operation and traffic density within that class of airspace – in particular to provide separation and active control in areas of dense or high-speed flight operations." ;
+          rdfs:label "Airspace" ;
+          rdfs:seeAlso "https://en.wikipedia.org/wiki/Airspace" ,
+                       "https://en.wikipedia.org/wiki/Airspace_class_(United_States)" ;
+          rdfs:tags "Airspace, atmosphere" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Alert_Area
+:Alert_Area rdf:type owl:Class ;
+            rdfs:subClassOf :Special_Use_Airspace ;
+            rdfs:comment "Alert areas are depicted on aeronautical charts to inform nonparticipating pilots of areas that may contain a high volume of pilot training or an unusual type of aerial activity. Pilots should be particularly alert when flying in these areas. All activity within an alert area must be conducted in accordance with CFRs, without waiver, and pilots of participating aircraft as well as pilots transiting the area must be equally responsible for collision avoidance." ;
+            rdfs:label "Alert Area" ;
+            rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+            rdfs:tags "alert, pilots, airspace, special use area" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Approach
+:Approach rdf:type owl:Class ;
+          rdfs:subClassOf :Flight-phase ;
+          rdfs:comment """Instrument Flight Rules (IFR): From the Initial Approach Fix (IAF) to the beginning of the landing flare. Visual Flight Rules (VFR): From the point of VFR pattern entry, or 1,000 feet above the runway elevation, to the beginning of the landing flare.
+
+Usage Notes: A holding procedure executed at the IAF is included in the En Route (ENR) phase.""" ;
+          rdfs:label "Approach" ;
+          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+          rdfs:tags "approach, IFR, IAF, VFR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Authorization
+:Authorization rdf:type owl:Class ;
+               rdfs:comment "Contains federal regulations and authorizations for TItle 14: Aeronautics and Space" ;
+               rdfs:label "Authorization" ;
+               rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I" ;
+               rdfs:tags "Certification, regulation, FAA, Authorization, UAS regulation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Autopilot_System
+:Autopilot_System rdf:type owl:Class ;
+                  rdfs:subClassOf :Instrument ;
+                  rdfs:label "Autopilot System" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Base
+:Base rdf:type owl:Class ;
+      rdfs:subClassOf :Approach ;
+      rdfs:comment "From the start of the turn at end of downwind leg until the start of the turn for final." ;
+      rdfs:label "Base" ;
+      rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Cargo
+:Cargo rdf:type owl:Class ;
+       rdfs:subClassOf :Payload ;
+       rdfs:comment "Property other than baggage accompanied or checked by passengers, or mail." ;
+       rdfs:label "Cargo" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Central_Weather_Advisory
+:Central_Weather_Advisory rdf:type owl:Class ;
+                          rdfs:subClassOf :Inflight_Aviation_Weather_Advisories ;
+                          rdfs:comment "CWAs are unscheduled inflight, flow control, air traffic, and air crew advisory. By nature of its short lead time, the CWA is not a flight planning product. It is generally a nowcast for conditions beginning within the next two hours" ;
+                          rdfs:label "Central Weather Advisory" ;
+                          rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html#:~:text=There%20are%20four%20types%20of,Center%20Weather%20Advisory%20(CWA)." ;
+                          rdfs:tags "central, weather, advisory, nowcast, conditions, flow control" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Change_of_Cruise_Level
+:Change_of_Cruise_Level rdf:type owl:Class ;
+                        rdfs:subClassOf :En-route ;
+                        rdfs:comment "Any climb or descent during cruise after the initial climb to cruise, but before descent to the destination." ;
+                        rdfs:label "Change of Cruise Level" ;
+                        rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                        rdfs:tags "cruise, change" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Chapter_1
+:Chapter_1 rdf:type owl:Class ;
+           rdfs:subClassOf :Authorization ;
+           rdfs:comment "Federal Aviation Administration, Department of Transportation" ;
+           rdfs:label "Chapter 1" ;
+           rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I" ;
+           rdfs:tags "FAA, Regulations, code, Federal, Aviation, Transportation, regulation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Chase_Aircraft
+:Chase_Aircraft rdf:type owl:Class ;
+                rdfs:subClassOf :UAS_Operation ;
+                rdfs:comment "Some UAS operations, particularlly BVLOS, require a manned aircraft (the chaser) to follow the ownship." ;
+                rdfs:label "Chase Aircraft" ;
+                rdfs:tags "chase, aircraft, BVLOS, manned" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Class_B_Airspace_VFR_Trainsition_Routes
+:Class_B_Airspace_VFR_Trainsition_Routes rdf:type owl:Class ;
+                                         rdfs:subClassOf :Published_VFR_Routes ;
+                                         rdfs:comment "To accommodate VFR traffic through certain Class B airspace, such as Seattle, Phoenix and Los Angeles, Class B Airspace VFR Transition Routes were developed. A Class B Airspace VFR Transition Route is defined as a specific flight course depicted on a TAC for transiting a specific Class B airspace. These routes include specific ATC‐assigned altitudes, and pilots must obtain an ATC clearance prior to entering Class B airspace on the route." ;
+                                         rdfs:label "Class B Airspace VFR Transition Routes" ;
+                                         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                                         rdfs:tags "VFR, Class B, transition, Seattle, Phoenix, Los Angeles, ATC clearance" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Climb_to_Cruise
+:Climb_to_Cruise rdf:type owl:Class ;
+                 rdfs:subClassOf :En-route ;
+                 rdfs:comment """IFR: From completion of Initial Climb to arrival at initial assigned cruise
+altitude.
+
+VFR: From completion of Initial Climb to initial cruise altitude.""" ;
+                 rdfs:label "Climb to Cruise" ;
+                 rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                 rdfs:tags "climb, cruise, IFR, VFR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Contingency_Volume
+:Contingency_Volume rdf:type owl:Class ;
+                    rdfs:subClassOf :Operational_Volume ;
+                    owl:disjointWith :Flight_Geography ;
+                    rdfs:comment "The column of airspace around the flight geography that further mitigates risk. Should an intruder aircraft penetrate this zone, the UAS should follow emergency procedures to prevent a mid-air collision." ;
+                    rdfs:label "Contingency Volume" ;
+                    rdfs:tags "contingency, volume, intruder, risk mitigation, emergency, collision" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Control_Station
+:Control_Station rdf:type owl:Class ;
+                 rdfs:subClassOf :Unmanned_Aircraft_System ;
+                 rdfs:comment "An interferance used by the remote pilot to control the flight path of the unmanned aircraft. Also known as the ground control station (GCS)." ;
+                 rdfs:label "Control Station" ;
+                 rdfs:seeAlso "CFR 14 Chapter 1 Subchapter F Part 107 Small Unmanned Aircraft System" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Controlled_Airspace
+:Controlled_Airspace rdf:type owl:Class ;
+                     rdfs:subClassOf :Airspace ;
+                     rdfs:comment "A generic term that covers the different classification of airspace (Class A, Class B, Class C, Class D, and Class E airspace) and defined dimensions within which air traffic control service is provided to IFR flights and to VFR flights in accordance with the airspace classification." ;
+                     rdfs:label "Controlled Airspace" ;
+                     rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html#:~:text=A%20generic%20term%20that%20covers,accordance%20with%20the%20airspace%20classification." ;
+                     rdfs:tags "Airspace, controlled, regulation, FAA" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Controlled_Firing_Area
+:Controlled_Firing_Area rdf:type owl:Class ;
+                        rdfs:subClassOf :Special_Use_Airspace ;
+                        rdfs:comment "CFAs contain activities which, if not conducted in a controlled environment, could be hazardous to nonparticipating aircraft. The distinguishing feature of the CFA, as compared to other special use airspace, is that its activities are suspended immediately when spotter aircraft, radar, or ground lookout positions indicate an aircraft might be approaching the area. There is no need to chart CFAs since they do not cause a nonparticipating aircraft to change its flight path." ;
+                        rdfs:label "Controlled Firing Area" ;
+                        rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                        rdfs:tags "Controlled, firing, area, special use, suspended" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Convective_SIGMET
+:Convective_SIGMET rdf:type owl:Class ;
+                   rdfs:subClassOf :Inflight_Aviation_Weather_Advisories ;
+                   rdfs:comment """Convective SIGMETs are issued in the conterminous U.S. for any of the following:
+
+a) Severe thunderstorm due to surface winds greater than or equal to 50 knots,
+hail at the surface greater than or equal to 3/4 inches in diameter, and tornadoes.
+
+b) Embedded thunderstorms
+
+c) A line of thunderstorms
+
+d) Thunderstorms producing precipitation greater than or equal to heavy precipitation affecting 40 percent or more of an area at least 3,000 square miles""" ;
+                   rdfs:label "Convective SIGMET" ;
+                   rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html#:~:text=There%20are%20four%20types%20of,Center%20Weather%20Advisory%20(CWA)." ;
+                   rdfs:tags "thunderstorms, weather, tornadoes, precipitation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Counter_Unmanned_Aircraft_Systems
+:Counter_Unmanned_Aircraft_Systems rdf:type owl:Class ;
+                                   rdfs:comment "Provides security from Unmanned Aerial Vehicles (UAV) and Unmanned Aerial Systems (UAS)" ;
+                                   rdfs:label "Counter Unmanned Aircraft Systems" ;
+                                   rdfs:tags "UAS, UAV, counter, security" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Crew_Member
+:Crew_Member rdf:type owl:Class ;
+             rdfs:subClassOf :Unmanned_Aircraft_System ;
+             rdfs:comment "A person assigned to perform duty in an aircraft during flight time" ;
+             rdfs:label "Crew Member" ;
+             rdfs:seeAlso "CFR 14 Chapter 1 Subchapter A Part 1 Subsection 1.1" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Crosswind
+:Crosswind rdf:type owl:Class ;
+           rdfs:subClassOf :Approach ;
+           rdfs:comment "A flight path of the VFR traffic pattern, which is perpendicular to the landing runway, crosses the departure end of the runway, and connects with the downwind leg." ;
+           rdfs:label "Crosswind" ;
+           rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Cruise
+:Cruise rdf:type owl:Class ;
+        rdfs:subClassOf :En-route ;
+        rdfs:comment "Any level flight segment after arrival at initial cruise altitude until the start of descent to the destination." ;
+        rdfs:label "Cruise" ;
+        rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+        rdfs:tags "cruise" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Cyber_Takeover
+:Cyber_Takeover rdf:type owl:Class ;
+                rdfs:subClassOf :Active ;
+                rdfs:comment "Cyber-takeover is a way of mitigating a drone by taking over the drone remotely, by impersonating the control station. It is done by hacking into the drone, essentially tricking the drone to switch fromthe legitimate controller. Cyber-takeover lets the mitigator direct the flight of the drone and access the drone's data and camera. This is an elegant way to mitigate a drone when it works." ;
+                rdfs:label "Cyber Takeover" ;
+                rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+                rdfs:tags "cyber takeover, counter UAS, hacking" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Descent
+:Descent rdf:type owl:Class ;
+         rdfs:subClassOf :En-route ;
+         rdfs:comment """IFR: Descent from cruise to either Initial Approach Fix (IAF) or VFR pattern entry. 
+
+VFR: Descent from cruise to the VFR pattern entry or 1,000 feet above the runway elevation, whichever comes first.""" ;
+         rdfs:label "Descent" ;
+         rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+         rdfs:tags "descent, IFR, VFR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Detect_and_Avoid_System
+:Detect_and_Avoid_System rdf:type owl:Class ;
+                         rdfs:subClassOf :Instrument ;
+                         rdfs:label "Detect and Avoid System" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#DoD_Classification
+:DoD_Classification rdf:type owl:Class ;
+                    rdfs:subClassOf :UAS_Classification ;
+                    owl:disjointWith :FAA_Classification ;
+                    rdfs:comment "The U.S. Department of Defense (DoD) classifies unmanned aerial systems (UAS) into \"Groups\" according to their size and capability, a joint system that replaced the service branches' separate categorization schemes in 2011." ;
+                    rdfs:label "DoD Classification" ;
+                    rdfs:seeAlso "https://en.wikipedia.org/wiki/UAS_groups_of_the_United_States_Armed_Forces" ;
+                    rdfs:tags "DoD UAS Classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Domestic
+:Domestic rdf:type owl:Class ;
+          rdfs:subClassOf <https://data.nasa.gov/ontologies/atmonto/NAS#Airport> ;
+          owl:disjointWith :International ;
+          rdfs:comment "Connects fights to airports within the country." ;
+          rdfs:label "Domestic Airport" ;
+          rdfs:tags "airport, domestic, american, flying" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Downwind
+:Downwind rdf:type owl:Class ;
+          rdfs:subClassOf :Approach ;
+          rdfs:comment "A flight path (normally 1,000 feet above the runway), which commences abeam the departure end of the runway and runs parallel to the runway in the direction opposite to landing, and terminates upon initiating the turn to base leg." ;
+          rdfs:label "Downwind" ;
+          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Electric
+:Electric rdf:type owl:Class ;
+          rdfs:subClassOf :Propulsion ;
+          rdfs:comment "Battery-powered electric propulsion systems use a motor to drive propellers, fans or wheels. Drone motors can be found in multirotor drones, fixed-wing UAVs that rely on forward flight, as well as unmanned surface, ground and underwater vehicles. Electric motors for UAVs and other unmanned vehicles may be brushed, which are simpler but noisier and more prone to wear, or brushless motors which are more efficient but often costlier." ;
+          rdfs:label "Electric" ;
+          rdfs:seeAlso "https://www.unmannedsystemstechnology.com/expo/engines-propulsion-systems/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Electro_Optical
+:Electro_Optical rdf:type owl:Class ;
+                 rdfs:subClassOf :Sensors ;
+                 rdfs:comment "Electro-optical sensors are electronic detectors that convert light, or a change in light, into an electronic signal. These sensors are able to detect electromagnetic radiation from the infrared up to the ultraviolet wavelengths." ;
+                 rdfs:label "Electro Optical" ;
+                 rdfs:seeAlso "https://en.wikipedia.org/wiki/Electro-optical_sensor" ;
+                 rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, electromagnetic, radiation, infrared, ultraviolet, wavelengths" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Emergency_Descent
+:Emergency_Descent rdf:type owl:Class ;
+                   rdfs:subClassOf :Flight-phase ;
+                   rdfs:comment """A controlled descent during any airborne phase in response to a perceived
+emergency situation.""" ;
+                   rdfs:label "Emergency Descent" ;
+                   rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                   rdfs:tags "controlled, emergency, descent" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#En-route
+:En-route rdf:type owl:Class ;
+          rdfs:subClassOf :Flight-phase ;
+          rdfs:comment """Instrument Flight Rules (IFR): From completion of Initial Climb through cruise altitude and completion of controlled descent to the Initial Approach Fix (IAF).
+
+Visual Flight Rules (VFR): From completion of Initial Climb through cruise and
+controlled descent to the VFR pattern altitude or 1,000 feet above runway elevation, whichever comes first.""" ;
+          rdfs:label "En Route" ;
+          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+          rdfs:tags "IFR, IAF, en route, VFR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#FAA_Classification
+:FAA_Classification rdf:type owl:Class ;
+                    rdfs:subClassOf :UAS_Classification ;
+                    rdfs:comment "The FAA classifies UAS based on the Maximum Gross Operating weight (MGOW). A UAS is considered a large UAS if its MGOW exceeds 55 pounds or more." ;
+                    rdfs:label "FAA Classification" ;
+                    rdfs:tags "FAA UAS classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Final
+:Final rdf:type owl:Class ;
+       rdfs:subClassOf :Approach ;
+       rdfs:comment "From the start of the turn to intercept the extended runway centerline, normally at the end of base leg, to the beginning of the landing flare. Includes VFR straight-in approaches." ;
+       rdfs:label "Final" ;
+       rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Final_Approach
+:Final_Approach rdf:type owl:Class ;
+                rdfs:subClassOf :Approach ;
+                rdfs:comment "From the FAF to the beginning of the landing flare." ;
+                rdfs:label "Final Approach" ;
+                rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flare
+:Flare rdf:type owl:Class ;
+       rdfs:subClassOf :Landing ;
+       rdfs:comment "Transition from nose-low to nose-up attitude just before landing until touchdown." ;
+       rdfs:label "Flare" ;
+       rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+       rdfs:tags "flare, landing" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight-phase
+:Flight-phase rdf:type owl:Class ;
+              rdfs:comment "Broad operational phases, plus “Unknown.” Most of the phases have subphases. Organizations that use these definitions may use the broad phases, the more detailed subphases, or a combination" ;
+              rdfs:label "Flight-phase" ;
+              rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+              rdfs:tags "Flight, phase, broad, operational" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight_Control
+:Flight_Control rdf:type owl:Class ;
+                rdfs:subClassOf :Instrument ;
+                rdfs:label "Flight Control" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight_Geography
+:Flight_Geography rdf:type owl:Class ;
+                  rdfs:subClassOf :Operational_Volume ;
+                  rdfs:comment "The column of airspace where flight operations will occur." ;
+                  rdfs:label "Flight Geography" ;
+                  rdfs:tags "airspace, geography, flight" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight_Information_Management_System
+:Flight_Information_Management_System rdf:type owl:Class ;
+                                      rdfs:subClassOf :Traffic_Management ;
+                                      rdfs:comment "FIMS is an interface for data exchange between FAA systems and UTM participants. FIMS enables exchange of airspace constraint data between the FAA and the USS Network. The FAA also uses this interface as an access point for information on active UTM operations. FIMS also provides a means for approved FAA stakeholders to query and receive post-hoc/archived data on UTM operations for the purposes of compliance audits and/or incident or accident investigation. FIMS is managed by the FAA and is a part of the UTM ecosystem." ;
+                                      rdfs:label "Flight Information Management System" ;
+                                      rdfs:seeAlso "https://www.faa.gov/sites/faa.gov/files/2022-08/UTM_ConOps_v2.pdf" ;
+                                      rdfs:tags "flight information, FIMS, FAA, UTM, USS, network" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight_Path
+:Flight_Path rdf:type owl:Class ;
+             rdfs:subClassOf :Flight_Geography ;
+             rdfs:comment "The flight path contains the point location individuals of the actual flight path taken." ;
+             rdfs:label "Flight Path" ;
+             rdfs:tags "flight, path" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Flight_Service_Station
+:Flight_Service_Station rdf:type owl:Class ;
+                        rdfs:subClassOf :NAS_Facility ;
+                        rdfs:comment "The FSS provides information (weather, route, terrain, flight plan) for private pilots flying into and out of small airports and rural areas. It assists pilots in emergencies and coordinates search-and-rescue operations for missing or overdue aircraft." ;
+                        rdfs:label "Flight Service Station" ;
+                        rdfs:seeAlso "https://science.howstuffworks.com/transport/flight/modern/air-traffic-control.htm" ;
+                        rdfs:tags "flight service, FSS, route, emergency" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Fuel
+:Fuel rdf:type owl:Class ;
+      rdfs:subClassOf :Propulsion ;
+      rdfs:comment "UAV engines may be piston-driven internal combustion engines, rotary engines or gas turbine engines. UAV engines will often incorporate systems such as advanced fuel injection systems and engine management systems to provide greater efficiency." ;
+      rdfs:label "Fuel" ;
+      rdfs:seeAlso "https://www.unmannedsystemstechnology.com/expo/engines-propulsion-systems/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#GPS
+:GPS rdf:type owl:Class ;
+     rdfs:subClassOf :Sensors ;
+     rdfs:comment "The Global Positioning System (GPS) is a satellite-based radio navigation system owned by the United States government and operated by the United States Space Force. It is one of the global navigation satellite systems (GNSS) that provide geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites" ;
+     rdfs:label "GPS" ;
+     rdfs:seeAlso "https://en.wikipedia.org/wiki/Global_Positioning_System" ;
+     rdfs:tags "sensors, UAV, UAS, electronics, payload, GPS, global positioning system, navigation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Gimbal
+:Gimbal rdf:type owl:Class ;
+        rdfs:subClassOf :Payload ;
+        rdfs:comment "A device that allows for multiple rotations about an axis and is used to equip multiple sensors to the same frame." ;
+        rdfs:label "Gimbal" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Ground_Based_Sensors
+:Ground_Based_Sensors rdf:type owl:Class ;
+                      rdfs:subClassOf :Unmanned_Aircraft_System ;
+                      rdfs:comment "Sensors located on the ground intended for UAV detection" ;
+                      rdfs:label "Ground Based Sensors" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Group_1
+:Group_1 rdf:type owl:Class ;
+         rdfs:subClassOf :Large_UAS ;
+         rdfs:comment """Maximum Gross Takeoff Weight (lbs): 0-20
+Normal Operating Altitude (ft): <1200 AGL
+Speed (KIAS): 100 kts
+
+AGL: Above Ground Level
+ft: Feet
+KIAS: Knots Indicated Airspeed""" ;
+         rdfs:label "Group 1" ;
+         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+         rdfs:tags "Group 1, FAA UAS classification, large UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Group_2
+:Group_2 rdf:type owl:Class ;
+         rdfs:subClassOf :Large_UAS ;
+         rdfs:comment """Maximum Gross Takeoff Weight (lbs): 21-55
+Normal Operating Altitude (ft): < 3500 AGL
+Speed (KIAS): < 250 kts
+
+AGL: Above Ground Level
+ft: Feet
+KIAS: Knots Indicated Airspeed""" ;
+         rdfs:label "Group 2" ;
+         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+         rdfs:tags "Group 2, FAA UAS Classification, large UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Group_3
+:Group_3 rdf:type owl:Class ;
+         rdfs:subClassOf :Large_UAS ;
+         rdfs:comment """Maximum Gross Takeoff Weight (lbs): < 1320
+Normal Operating Altitude (ft): < 18,000 MSL
+Speed (KIAS): < 250 kts
+
+MSL: Mean Sea Level
+ft: Feet
+KIAS: Knots Indicated Airspeed""" ;
+         rdfs:label "Group 3" ;
+         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+         rdfs:tags "Group 3,FAA UAS classification, large UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Group_4
+:Group_4 rdf:type owl:Class ;
+         rdfs:subClassOf :Large_UAS ;
+         rdfs:comment """Maximum Gross Takeoff Weight (lbs): > 1320
+Normal Operating Altitude (ft): < 18,000 MSL
+Speed (KIAS): Any Airspeed
+
+MSL: Mean Sea Level
+ft: Feet
+KIAS: Knots Indicated Airspeed""" ;
+         rdfs:label "Group 4" ;
+         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+         rdfs:tags "Group 4, FAA UAS classification, large UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Group_5
+:Group_5 rdf:type owl:Class ;
+         rdfs:subClassOf :Large_UAS ;
+         rdfs:comment """Maximum Gross Takeoff Weight (lbs): > 1320
+Normal Operating Altitude (ft): > 18, 000 MSL
+Speed (KIAS): Any Airspeed
+
+MSL: Mean Sea Level
+ft: Feet
+KIAS: Knots Indicated Airspeed""" ;
+         rdfs:label "Group 5" ;
+         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+         rdfs:tags "Group 5, FAA UAS classification, large UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Gyrodyne
+:Gyrodyne rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> ;
+          rdfs:comment "A rotorcraft whose rotors are normally engine-driven for takeoff, hovering, and for forward flight through part of its speed range, and whose means of propulsion, consisting usually of conventioal propellers" ;
+          rdfs:label "Gyrodyne" ;
+          rdfs:seeAlso "CFR Title 14 CH I Subchapter Part 1" ;
+          rdfs:tags "rotorcraft, rotor, rotors, propellers, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Gyroplane
+:Gyroplane rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> ;
+           rdfs:comment "A rotorcraft whose rotors are not engine-driven, except for initial starting, but are made to rotate by action of the air when the rotorcraft is moving, and whose means of propulsion, consisting usually of conventional propellers, is independent of the rotor system." ;
+           rdfs:label "Gyroplane" ;
+           rdfs:seeAlso "CFR Title 14 CH I Subchapter A Part 1" ;
+           rdfs:tags "rotor, rotor, propeller, propellers, gyroplane, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Helicopter
+:Helicopter rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> ;
+            rdfs:comment "A rotorcraft that, for its horizontal motion, depends principally on its engine-driven rotors." ;
+            rdfs:label "Helicopter" ;
+            rdfs:seeAlso "CFR Title 14 CH Subchapter A Part 1" ;
+            rdfs:tags "rotor, rotors, propeller, propellers, helicopter, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#High_Energy
+:High_Energy rdf:type owl:Class ;
+             rdfs:subClassOf :Active ;
+             rdfs:comment "Includes lasers and HPM" ;
+             rdfs:label "High Energy" ;
+             rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+             rdfs:tags "High energy, counter UAS, HPM, lasers" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#High_Power_Microwave_Devices
+:High_Power_Microwave_Devices rdf:type owl:Class ;
+                              rdfs:subClassOf :High_Energy ;
+                              owl:disjointWith :Lasers ;
+                              rdfs:comment "High-power microwave devices use high power electromagnetic energy to stop drones. The counter-UAS system emits an intense microwave beam that is so powerful it can destroy a small drone within seconds." ;
+                              rdfs:label "High Power Microwave Devices" ;
+                              rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+                              rdfs:tags "electromagnetic, high power, HPM, counter UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Holding
+:Holding rdf:type owl:Class ;
+         rdfs:subClassOf :En-route ;
+         rdfs:comment "Execution of a predetermined maneuver (usually an oval racetrack pattern) which keeps the aircraft within a specified airspace while awaiting further clearance. Descent during holding is also covered in this subphase." ;
+         rdfs:label "Holding" ;
+         rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+         rdfs:tags "holding, predetermined, maneuver, oval racetrack" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Hybrid
+:Hybrid rdf:type owl:Class ;
+        rdfs:subClassOf :Propulsion ;
+        rdfs:comment "Hybrid propulsion systems combine two or more energy sources to provide power, and are used in a wide range of unmanned systems, including UAVs (unmanned aerial vehicles), UGVs (unmanned ground vehicles), USVs (unmanned surface vessels), and UUVs (unmanned underwater vehicles)." ;
+        rdfs:label "Hybrid" ;
+        rdfs:seeAlso "https://www.unmannedsystemstechnology.com/expo/hybrid-propulsion/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#IFR_Military_Training_Routes
+:IFR_Military_Training_Routes rdf:type owl:Class ;
+                              rdfs:subClassOf :Military_Training_Routes ;
+                              rdfs:comment "Operations on these routes are conducted in accordance with IFR regardless of weather conditions." ;
+                              rdfs:label "IFR Miltary Training Routes" ;
+                              rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                              rdfs:tags "IFR, military, training" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#IMU
+:IMU rdf:type owl:Class ;
+     rdfs:subClassOf :Sensors ;
+     rdfs:comment "An inertial measurement unit (IMU) is an electronic device that measures and reports a body's specific force, angular rate, and sometimes the orientation of the body, using a combination of accelerometers, gyroscopes, and sometimes magnetometers. When the magnetometer is included, IMUs are referred to as IMMUs" ;
+     rdfs:label "IMU" ;
+     rdfs:seeAlso "https://en.wikipedia.org/wiki/Inertial_measurement_unit" ;
+     rdfs:tags "sensors, navigation, UAV, UAS, electronics, payload, inertial measurement, unit, IMU, magnetic, gyroscopic, accelerometers" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Inflight_Aviation_Weather_Advisories
+:Inflight_Aviation_Weather_Advisories rdf:type owl:Class ;
+                                      rdfs:comment "Inflight Aviation Weather Advisories are forecasts to advise en route aircraft of development of potentially hazardous weather. Inflight aviation weather advisories in the conterminous U.S. are issued by the Aviation Weather Center (AWC) in Kansas City, MO, as well as 20 Center Weather Service Units (CWSU) associated with ARTCCs." ;
+                                      rdfs:label "Inflight Aviation Weather Advisories" ;
+                                      rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html#:~:text=There%20are%20four%20types%20of,Center%20Weather%20Advisory%20(CWA)." ;
+                                      rdfs:tags "inflight, aviation, weather, en route, hazordous" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Infrared
+:Infrared rdf:type owl:Class ;
+          rdfs:subClassOf :Sensors ;
+          rdfs:comment "An infrared sensor (IR sensor) is a radiation-sensitive optoelectronic component with a spectral sensitivity in the infrared wavelength range 780 nm … 50 µm." ;
+          rdfs:label "Infrared" ;
+          rdfs:seeAlso "https://www.infratec-infrared.com/sensor-division/service-support/glossary/infrared-sensor/#:~:text=An%20infrared%20sensor%20(IR%20sensor,systems%20to%20detect%20unwelcome%20guests." ;
+          rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, infrared, IR, radiation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Initial-climb
+:Initial-climb rdf:type owl:Class ;
+               rdfs:subClassOf :Flight-phase ;
+               rdfs:comment "From the end of the Takeoff subphase to the first prescribed power reduction, or until reaching 1,000 feet above runway elevation or the VFR pattern, whichever comes first." ;
+               rdfs:label "Initial Climb" ;
+               rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+               rdfs:tags "initial, climb, takeoff subphase" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Initial_Approach
+:Initial_Approach rdf:type owl:Class ;
+                  rdfs:subClassOf :Approach ;
+                  rdfs:comment "From the IAF to the Final Approach Fix (FAF)" ;
+                  rdfs:label "Initial Approach" ;
+                  rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf :Unmanned_Aircraft ;
+            rdfs:comment "A device using an internal mechanism to show visually or aurally the altitude, or operation of an aircraft or aircraft part. It includes electronic devices for automatically controlling an aircraft in flight." ;
+            rdfs:label "Instrument" ;
+            rdfs:seeAlso "CH 1 Subchapter A Part 1 Subsection 1.1" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Intelligence_Analyst
+:Intelligence_Analyst rdf:type owl:Class ;
+                      rdfs:subClassOf :Crew_Member ;
+                      rdfs:comment "Responsible for the exploitation of the data/signals that the UAS collects. This role also has multple analyst subsets, including video imagery, all-source intelligence, signals intelligence, and so forth. For larger UAS (Group 4/5), these roles are typically performaed by an element of the processing, exploitation, and dissemination (PED) intelligence community." ;
+                      rdfs:label "Intelligence Analyst" ;
+                      rdfs:seeAlso "AD1014109 Institude for Defense Analyses Staffing for Unmanned Aircraft Systems (UAS) Operations" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#International
+:International rdf:type owl:Class ;
+               rdfs:subClassOf <https://data.nasa.gov/ontologies/atmonto/NAS#Airport> ;
+               rdfs:comment "Connects flights to airports outside of the country." ;
+               rdfs:label "International Airport" ;
+               rdfs:tags "airport, international, flying" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Interval_Data
+:Interval_Data rdf:type owl:Class ;
+               rdfs:comment "state data that has a temporal lifetime: A start and end time." ;
+               rdfs:label "Interval Data" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Jammers
+:Jammers rdf:type owl:Class ;
+         rdfs:subClassOf :Active ;
+         rdfs:comment "Jammers interfere with the communications link between the drone and the control station. By severing the transmission link, jammers cause the drone to go into its safety protocols meaning that the drone typically sets itself down gently or navigates back to its launch location." ;
+         rdfs:label "Jammers" ;
+         rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+         rdfs:tags "jammers, counter UAS, interferance" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Jet_Aircraft
+:Jet_Aircraft rdf:type owl:Class ;
+              rdfs:subClassOf :Aircraft ;
+              rdfs:comment "Aircraft propelled by one or more jet engines." ;
+              rdfs:label "Jet Aircraft" ;
+              rdfs:seeAlso "https://en.wikipedia.org/wiki/Jet_aircraft" ;
+              rdfs:tags "Jet engine, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Kinetic
+:Kinetic rdf:type owl:Class ;
+         rdfs:subClassOf :Active ;
+         rdfs:comment "Includes any projectile counter UAS measure" ;
+         rdfs:label "Kinetic" ;
+         rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+         rdfs:tags "Kinetic, projectile, counter UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Landing
+:Landing rdf:type owl:Class ;
+         rdfs:subClassOf :Flight-phase ;
+         rdfs:comment "From the beginning of the landing flare until aircraft exits the landing runway, comes to a stop on the runway, or when power is applied for takeoff in the case of a touch-and-go landing." ;
+         rdfs:label "Landing" ;
+         rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+         rdfs:tags "landing, runway" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Landing_Roll
+:Landing_Roll rdf:type owl:Class ;
+              rdfs:subClassOf :Landing ;
+              rdfs:comment "After touchdown until aircraft exits the landing runway or comes to a stop, whichever occurs first." ;
+              rdfs:label "Landing Roll" ;
+              rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+              rdfs:tags "landing, roll" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Large_UAS
+:Large_UAS rdf:type owl:Class ;
+           rdfs:subClassOf :FAA_Classification ;
+           owl:disjointWith :Small_UAS ;
+           rdfs:comment """Large public UAS may have wingspans as large as commercial airliners, and may operate in and out of public/military dual-use airfields. Due to the high altitudes at which these UAS routinely operate, and the means through which they reach and vacate operating altitudes, encounters with manned or low-altitude unmanned traffic are rare.
+
+Public users operating as “public aircraft” retain the responsibility to determine airworthiness and pilot qualifications. Aircraft certification and operating rules apply to the entire UAS, including the aircraft itself, the flight crew with their associated qualifications, the control station, and command and control links.
+
+Large UAS are classified into 5 groups: Group 1, Group 2, Group 3, Group 4, or Group 5.""" ;
+           rdfs:label "Large UAS" ;
+           rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_3.html" ;
+           rdfs:tags "FAA, classification, UAS, unmanned aerial system, large, UAV, unmanned aerial vehicle" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Laser-guided_Weapon
+:Laser-guided_Weapon rdf:type owl:Class ;
+                     rdfs:subClassOf :Weapon ;
+                     rdfs:comment "A laser-guided bomb (LGB) is a guided bomb that uses semi-active laser guidance to strike a designated target with greater accuracy than an unguided bomb." ;
+                     rdfs:label "Laser-guided Weapon" ;
+                     rdfs:seeAlso "https://en.wikipedia.org/wiki/Laser-guided_bomb" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Laser_Rangefinder
+:Laser_Rangefinder rdf:type owl:Class ;
+                   rdfs:subClassOf :Sensors ;
+                   rdfs:comment "Laser rangefinders (LRFs) are used by drones and unmanned systems to determine the distance to a particular target or object of interest. They typically calculate distance via the time-of-flight principle, which measures the time taken for a pulse to be reflected from a distant object, or by measuring the phase shift of reflected light at multiple frequencies." ;
+                   rdfs:label "Laser Rangefinder" ;
+                   rdfs:seeAlso "https://www.unmannedsystemstechnology.com/expo/laser-rangefinders/" ;
+                   rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, range finder, LRF, laser, distance, light" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Lasers
+:Lasers rdf:type owl:Class ;
+        rdfs:subClassOf :High_Energy ;
+        rdfs:comment "Lasers are a type of high-energy mitigation and can be used to destroy malicious drones. Lasers are cost efficient as a means of mitigation and effective over long distances." ;
+        rdfs:label "Lasers" ;
+        rdfs:seeAlso "https://www.dedrone.com/white-papers/counter-uas" ;
+        rdfs:tags "lasers, high energy, counter UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Lidar
+:Lidar rdf:type owl:Class ;
+       rdfs:subClassOf :Sensors ;
+       rdfs:comment "Lidar (light detection and ranging) is a method for determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the receiver. Lidar may operate in a fixed direction (e.g., vertical) or it may scan multiple directions, in which case it is known as lidar scanning or 3D laser scanning, a special combination of 3-D scanning and laser scanning. Lidar has terrestrial, airborne, and mobile applications." ;
+       rdfs:label "Lidar" ;
+       rdfs:seeAlso "https://en.wikipedia.org/wiki/Lidar" ;
+       rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, lidar, light, detection, ranging, laser, scanning" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Local_Airport_Advisory
+:Local_Airport_Advisory rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport_Advisory/Information_Services> ;
+                        rdfs:comment "Local Airport Advisory (LAA) service is available only in Alaska and is operated within 10 statute miles of an airport where a control tower is not operating but where a FSS is located on the airport. At such locations, the FSS provides a complete local airport advisory service to arriving and departing aircraft. During periods of fast changing weather the FSS will automatically provide Final Guard as part of the service from the time the aircraft reports “on-final” or “taking-the-active-runway” until the aircraft reports “on-the-ground” or “airborne.”" ;
+                        rdfs:label "Local Airport Advisory" ;
+                        rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                        rdfs:tags "Airport, local, Alaska, FSS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Long-range_Communication_System
+:Long-range_Communication_System rdf:type owl:Class ;
+                                 rdfs:subClassOf :Instrument ;
+                                 rdfs:comment "A system that uses satellite relay, data link, high frequency, or another approved communication system which extends beyond the line of sight." ;
+                                 rdfs:label "Long-range Communication System" ;
+                                 rdfs:seeAlso "CFR Title 14 CH I Subchapter A Part 1" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Long-range_Navigation_System
+:Long-range_Navigation_System rdf:type owl:Class ;
+                              rdfs:subClassOf :Instrument ;
+                              rdfs:label "Long-range Navigation System" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Low_Flying
+:Low_Flying rdf:type owl:Class ;
+            rdfs:subClassOf :Maneuvering ;
+            rdfs:comment "Intentional low-altitude flight not connected with a landing or takeoff, usually in preparation for or during observation work, demonstration, photography work, aerial application, training, sight seeing, ostentatious display, or other similar activity. For rotorcraft, this also includes hovering (not associated with landing or takeoff) and handling external loads." ;
+            rdfs:label "Low Flying" ;
+            rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+            rdfs:tags "low, flying, altitude" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#METAR
+:METAR rdf:type owl:Class ;
+       rdfs:subClassOf :Meteorological_Status_Data ;
+       rdfs:comment "METAR is a format for reporting weather information. A METAR weather report is predominantly used by aircraft pilots, and by meteorologists, who use aggregated METAR information to assist in weather forecasting." ;
+       rdfs:label "METAR" ;
+       rdfs:tags "METAR, report, weather, forecasting" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#METAR_Reporting_Station
+:METAR_Reporting_Station rdf:type owl:Class ;
+                         rdfs:comment "A weather reporting station that provides sensor data for a METAR Report. Many airports are also METAR reporting stations." ;
+                         rdfs:label "METAR Reporting Station" ;
+                         rdfs:tags "weather, reporting, station, METAR, meteorology" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Maneuvering
+:Maneuvering rdf:type owl:Class ;
+             rdfs:subClassOf :Flight-phase ;
+             rdfs:comment "Low altitude/aerobatic flight operations." ;
+             rdfs:label "Maneuvering" ;
+             rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+             rdfs:tags "maneuver, flight, operation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Manufacturer
+:Manufacturer rdf:type owl:Class ;
+              rdfs:comment "Company or organization that specializing in making either the entire aircraft, or components for an aircraft." ;
+              rdfs:label "Manufacturer" ;
+              rdfs:tags "manufacturer, aircraft, company, business, production" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Massed-Fire
+:Massed-Fire rdf:type owl:Class ;
+             rdfs:subClassOf :Weapon ;
+             rdfs:comment "Massed fire is the firing of a number of weapons directed at a single point or small area." ;
+             rdfs:label "Massed-Fire" ;
+             rdfs:seeAlso "https://www.militaryfactory.com/dictionary/military-terms-defined.php?term_id=3266" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Meteorological_Condition
+:Meteorological_Condition rdf:type owl:Class ;
+                          rdfs:comment "A superclass over the various types of meteorological conditions." ;
+                          rdfs:label "Meteorological Condition" ;
+                          rdfs:tags "meteorology" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Meteorological_Status_Data
+:Meteorological_Status_Data rdf:type owl:Class ;
+                            rdfs:subClassOf :Interval_Data ;
+                            rdfs:comment "Data pertaining to the current or future meteorological status" ;
+                            rdfs:label "Meteorological Status Data" ;
+                            rdfs:tags "Meteorology, weather, data" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Military_Operation_Area
+:Military_Operation_Area rdf:type owl:Class ;
+                         rdfs:subClassOf :Special_Use_Airspace ;
+                         rdfs:comment """a) MOAs consist of airspace of defined vertical and lateral limits established for the purpose of separating certain military training activities from IFR traffic. Whenever a MOA is being used, nonparticipating IFR traffic may be cleared through a MOA if IFR separation can be provided by ATC. Otherwise, ATC will reroute or restrict nonparticipating IFR traffic.
+
+b) Examples of activities conducted in MOAs include, but are not limited to: air combat tactics, air intercepts, aerobatics, formation training, and low-altitude tactics. Military pilots flying in an active MOA are exempted from the provisions of 14 CFR Section 91.303(c) and (d) which prohibits aerobatic flight within Class D and Class E surface areas, and within Federal airways. Additionally, the Department of Defense has been issued an authorization to operate aircraft at indicated airspeeds in excess of 250 knots below 10,000 feet MSL within active MOAs.
+
+c) Pilots operating under VFR should exercise extreme caution while flying within a MOA when military activity is being conducted. The activity status (active/inactive) of MOAs may change frequently. Therefore, pilots should contact any FSS within 100 miles of the area to obtain accurate real‐time information concerning the MOA hours of operation. Prior to entering an active MOA, pilots should contact the controlling agency for traffic advisories.
+
+d) Permanent MOAs are charted on Sectional Aeronautical, VFR Terminal Area, and the appropriate En Route Low Altitude charts.""" ;
+                         rdfs:label "Military Operation Area" ;
+                         rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                         rdfs:tags "Military, operation, MOA, extreme caution" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Military_Training_Routes
+:Military_Training_Routes rdf:type owl:Class ;
+                          rdfs:subClassOf :Other_Airspace ;
+                          rdfs:comment """a) National security depends largely on the deterrent effect of our airborne military forces. To be proficient, the military services must train in a wide range of airborne tactics. One phase of this training involves “low level” combat tactics. The required maneuvers and high speeds are such that they may occasionally make the see‐and‐avoid aspect of VFR flight more difficult without increased vigilance in areas containing such operations. In an effort to ensure the greatest practical level of safety for all flight operations, the Military Training Route (MTR) program was conceived.
+
+b) The MTR program is a joint venture by the FAA and the Department of Defense (DoD). MTRs are mutually developed for use by the military for the purpose of conducting low‐altitude, high‐speed training. The routes above 1,500 feet AGL are developed to be flown, to the maximum extent possible, under IFR. The routes at 1,500 feet AGL and below are generally developed to be flown under VFR.
+
+c) Generally, MTRs are established below 10,000 feet MSL for operations at speeds in excess of 250 knots. However, route segments may be defined at higher altitudes for purposes of route continuity. For example, route segments may be defined for descent, climbout, and mountainous terrain. There are IFR and VFR routes""" ;
+                          rdfs:label "Military Training Routes" ;
+                          rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                          rdfs:tags "Military, other airspace, training, national security" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Missed_Approach
+:Missed_Approach rdf:type owl:Class ;
+                 rdfs:subClassOf :Approach ;
+                 rdfs:comment "From the first application of power after the crew elects to execute a missed approach or go-around until the aircraft re-enters the sequence for a VFR pattern (go-around) or until the aircraft reaches the IAF for another approach (IFR)." ;
+                 rdfs:label "Missed Approach" ;
+                 rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#NAS_Facility
+:NAS_Facility rdf:type owl:Class ;
+              rdfs:comment "The set of FAA and airport facilities involved in operational air traffic management." ;
+              rdfs:label "NAS Facility" ;
+              rdfs:tags "NAS, FAA, facility, air traffic management" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#National_Security_Area
+:National_Security_Area rdf:type owl:Class ;
+                        rdfs:subClassOf :Special_Use_Airspace ;
+                        rdfs:comment "NSAs consist of airspace of defined vertical and lateral dimensions established at locations where there is a requirement for increased security and safety of ground facilities. Pilots are requested to voluntarily avoid flying through the depicted NSA. When it is necessary to provide a greater level of security and safety, flight in NSAs may be temporarily prohibited by regulation under the provisions of 14 CFR Section 99.7. Regulatory prohibitions will be issued by System Operations Security and disseminated via NOTAM. Inquiries about NSAs should be directed to System Operations Security." ;
+                        rdfs:label "National Security Area" ;
+                        rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                        rdfs:tags "national, security, airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Nonlethal_Weapon
+:Nonlethal_Weapon rdf:type owl:Class ;
+                  rdfs:subClassOf :Weapon ;
+                  rdfs:comment "Weapons intended to slow down or obstruct a target, but not intended to be lethal." ;
+                  rdfs:label "Nonlethal Weapon" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Operational_Volume
+:Operational_Volume rdf:type owl:Class ;
+                    rdfs:subClassOf :UAS_Operation ;
+                    rdfs:comment "The operational volume is the column of airspace that encompasses both the flight geopgraphy and the contingency volume." ;
+                    rdfs:label "Operational Volume" ;
+                    rdfs:tags "operational volume, contingency, geography, flight" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Other_Airspace
+:Other_Airspace rdf:type owl:Class ;
+                rdfs:subClassOf :Airspace ;
+                rdfs:comment "Other airspace areas are those not specifically classified" ;
+                rdfs:label "Other Airspace" ;
+                rdfs:tags "Airspace, unclassified, other airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Parachute_Jumping_Aircraft_Operations
+:Parachute_Jumping_Aircraft_Operations rdf:type owl:Class ;
+                                       rdfs:subClassOf :Other_Airspace ;
+                                       rdfs:comment """a) Procedures relating to parachute jump areas are contained in 14 CFR Part 105. Tabulations of parachute jump areas in the U.S. are contained in the Chart Supplement U.S.
+
+b) Pilots of aircraft engaged in parachute jump operations are reminded that all reported altitudes must be with reference to mean sea level, or flight level, as appropriate, to enable ATC to provide meaningful traffic information.
+
+c) Parachute operations in the vicinity of an airport without an operating control tower - there is no substitute for alertness while in the vicinity of an airport. It is essential that pilots conducting parachute operations be alert, look for other traffic, and exchange traffic information as recommended in paragraph 4-1-9, Traffic Advisory Practices at Airports Without Operating Control Towers. In addition, pilots should avoid releasing parachutes while in an airport traffic pattern when there are other aircraft in that pattern. Pilots should make appropriate broadcasts on the designated Common Traffic Advisory Frequency (CTAF), and monitor that CTAF until all parachute activity has terminated or the aircraft has left the area. Prior to commencing a jump operation, the pilot should broadcast the aircraft's altitude and position in relation to the airport, the approximate relative time when the jump will commence and terminate, and listen to the position reports of other aircraft in the area.""" ;
+                                       rdfs:label "Parachute Jumping Aircraft Operations" ;
+                                       rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                                       rdfs:tags "Parachute, jumping" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_107
+:Part_107 rdf:type owl:Class ;
+          rdfs:subClassOf :Subchapter_F ;
+          rdfs:comment "Small Unmanned Aircraft Systems" ;
+          rdfs:label "Part 107" ;
+          rdfs:seeAlso "https://www.faa.gov/uas/commercial_operators/part_107_airspace_authorizations" ;
+          rdfs:tags "UAS, regulation, subchapter F" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_33
+:Part_33 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_C ;
+         rdfs:comment "Airworthiness Standards: Aircraft Engines" ;
+         rdfs:label "Part 33" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-33" ;
+         rdfs:tags "airworthiness, standards, regulation, aircraft, subchapter C" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_35
+:Part_35 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_C ;
+         rdfs:comment "Airworthiness Standards: Propellers" ;
+         rdfs:label "Part 35" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-35" ;
+         rdfs:tags "airworthiness, standards, regulation, propellers, subchapter C" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_47
+:Part_47 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_C ;
+         rdfs:comment "Aircraft Registration" ;
+         rdfs:label "Part 47" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-47" ;
+         rdfs:tags "aircraft, registration, regulation, subchapter C" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_61
+:Part_61 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_D ;
+         rdfs:comment "Certification: Pilots, Flight Instructors, and Ground Instructors" ;
+         rdfs:label "Part 61" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61" ;
+         rdfs:tags "certification, instructor, pilot, pilots, subchapter D" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_63
+:Part_63 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_D ;
+         rdfs:comment "Certification: Flight Crewmembers Other Than Pilots" ;
+         rdfs:label "Part 63" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-63" ;
+         rdfs:tags "flight crewmembers, regulation, certification, subchapter D" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_65
+:Part_65 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_D ;
+         rdfs:comment "Certification: Airmen Other Than Flight Crewmembers" ;
+         rdfs:label "Part 65" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-65" ;
+         rdfs:tags "airmen, regulation, certification, subchapter D" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Part_91
+:Part_91 rdf:type owl:Class ;
+         rdfs:subClassOf :Subchapter_F ;
+         rdfs:comment "General Operating and Flight Rules" ;
+         rdfs:label "Part 91" ;
+         rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91" ;
+         rdfs:tags "regulation, standards, general operation, flight rules, subchapter F" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Passive
+:Passive rdf:type owl:Class ;
+         rdfs:subClassOf :Counter_Unmanned_Aircraft_Systems ;
+         rdfs:comment "Passive measures involve reducing the threat posed by the presence of a drone without actually disrupting the drone" ;
+         rdfs:label "Passive" ;
+         rdfs:seeAlso "https://informationsecuritybuzz.com/pros-cons-active-passive-drone-countermeasures/" ;
+         rdfs:tags "Counter UAS, passive, threat reduction" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Payload
+:Payload rdf:type owl:Class ;
+         rdfs:subClassOf :Unmanned_Aircraft ;
+         rdfs:label "Payload" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Planned_Flight_Path
+:Planned_Flight_Path rdf:type owl:Class ;
+                     rdfs:subClassOf :Flight_Geography ;
+                     rdfs:comment "Planned Flight Path contains the planned point location of individuals that indicate the flight path" ;
+                     rdfs:label "Planned Flight Path" ;
+                     rdfs:tags "flight, planning" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Post_Impact
+:Post_Impact rdf:type owl:Class ;
+             rdfs:subClassOf :Flight-phase ;
+             rdfs:comment """Any of that portion of the flight which occurs after impact with a person, object, obstacle or terrain.
+
+Usage Notes: While not a Phase of Flight per se, this phase is added to permit accurate sequence of event reconstruction for occurrences. For example, to capture post-impact fire.""" ;
+             rdfs:label "Post Impact" ;
+             rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+             rdfs:tags "impact, crash" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Power_Back
+:Power_Back rdf:type owl:Class ;
+            rdfs:subClassOf :Taxi ;
+            rdfs:comment "Takes place when the aircraft, under its own power, reverses from the stand or parking position." ;
+            rdfs:label "Power Back" ;
+            rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Powered_Lift
+:Powered_Lift rdf:type owl:Class ;
+              rdfs:subClassOf :Aircraft ;
+              rdfs:comment "A powered lift aircraft takes off and lands vertically under engine power but uses a fixed wing for horizontal flight. Like helicopters, these aircraft do not need a long runway to take off and land, but they have a speed and performance similar to standard fixed-wing aircraft in combat or other situations." ;
+              rdfs:label "Powered Lift" ;
+              rdfs:seeAlso "https://en.wikipedia.org/wiki/Powered_lift" ;
+              rdfs:tags "powered lift, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Powered_Parachute
+:Powered_Parachute rdf:type owl:Class ;
+                   rdfs:subClassOf :Aircraft ;
+                   rdfs:comment "A powered parachute, often abbreviated PPC, and also called a motorized parachute or paraplane, is a type of aircraft that consists of a parafoil with a motor and wheels." ;
+                   rdfs:label "Powered Parachute" ;
+                   rdfs:seeAlso "https://en.wikipedia.org/wiki/Powered_parachute" ;
+                   rdfs:tags "powered parachute, aircraft, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Precision-guided_Munition
+:Precision-guided_Munition rdf:type owl:Class ;
+                           rdfs:subClassOf :Weapon ;
+                           rdfs:comment "A precision-guided munition (PGM, smart weapon, smart munition, smart bomb) is a guided munition intended to precisely hit a specific target, to minimize collateral damage and increase lethality against intended targets." ;
+                           rdfs:label "Precision-guided Munition" ;
+                           rdfs:seeAlso "https://en.wikipedia.org/wiki/Precision-guided_munition" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Prohibited_Area
+:Prohibited_Area rdf:type owl:Class ;
+                 rdfs:subClassOf :Special_Use_Airspace ;
+                 rdfs:comment "Prohibited areas contain airspace of defined dimensions identified by an area on the surface of the earth within which the flight of aircraft is prohibited. Such areas are established for security or other reasons associated with the national welfare. These areas are published in the Federal Register and are depicted on aeronautical charts." ;
+                 rdfs:label "Prohibited Area" ;
+                 rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                 rdfs:tags "prohibited, airspace, security" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Propulsion
+:Propulsion rdf:type owl:Class ;
+            rdfs:subClassOf :Unmanned_Aircraft ;
+            rdfs:comment "Propulsion is the means of moving the aircraft. The aircraft can be powered by either electrical batteries, fuel, or a hybrid of the two." ;
+            rdfs:label "Propulsion" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Published_VFR_Routes
+:Published_VFR_Routes rdf:type owl:Class ;
+                      rdfs:subClassOf :Other_Airspace ;
+                      rdfs:comment "Published VFR routes for transitioning around, under and through complex airspace such as Class B airspace were developed through a number of FAA and industry initiatives. All of the following terms, i.e., “VFR Flyway” “VFR Corridor” and “Class B Airspace VFR Transition Route” have been used when referring to the same or different types of routes or airspace." ;
+                      rdfs:label "Published VFR Routes" ;
+                      rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RVR_Measurement_Data
+:RVR_Measurement_Data rdf:type owl:Class ;
+                      rdfs:subClassOf :Interval_Data ;
+                      rdfs:comment "A measurement of the distance over which a pilot of an aircraft on the centerline of a runway can see the runway surface markings delineating the runway and its centerline. RVR (Runway Visible Range) is expressed as an interval specifying the minimum and maximum number of visible feet." ;
+                      rdfs:label "RVR Measurement Data" ;
+                      rdfs:tags "RVR, runway visible range, measurement data" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Radar
+:Radar rdf:type owl:Class ;
+       rdfs:subClassOf :Sensors ;
+       rdfs:comment "Radar is a radiolocation system that uses radio waves to determine the distance (ranging), angle (azimuth), and radial velocity of objects relative to the site. It is used to detect and track aircraft, ships, spacecraft, guided missiles, motor vehicles, map weather formations, and terrain. A radar system consists of a transmitter producing electromagnetic waves in the radio or microwaves domain, a transmitting antenna, a receiving antenna (often the same antenna is used for transmitting and receiving) and a receiver and processor to determine properties of the objects. Radio waves (pulsed or continuous) from the transmitter reflect off the objects and return to the receiver, giving information about the objects' locations and speeds." ;
+       rdfs:label "Radar" ;
+       rdfs:seeAlso "https://en.wikipedia.org/wiki/Radar" ;
+       rdfs:tags "sensors, detection, UAV, UAS, electronics, payload, radar, radio waves, ranging, distance, navigation, electromagnetic" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Rejected_Takeoff
+:Rejected_Takeoff rdf:type owl:Class ;
+                  rdfs:subClassOf :Takeoff ;
+                  rdfs:comment """During takeoff, from the point where the decision to abort has been taken
+until the aircraft begins to taxi from the runway.""" ;
+                  rdfs:label "Rejected Takeoff" ;
+                  rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                  rdfs:tags "takeoff, rejected" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Remote_Airport_Information_Service
+:Remote_Airport_Information_Service rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport_Advisory/Information_Services> ;
+                                    rdfs:comment "Remote Airport Information Service (RAIS) is provided in support of short term special events like small to medium fly-ins. The service is advertised by NOTAM D only. The FSS will not have access to a continuous readout of the current winds and altimeter; therefore, RAIS does not include weather and/or Final Guard service. However, known traffic, special event instructions, and all other services are provided." ;
+                                    rdfs:label "Remote Airport Information Service" ;
+                                    rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                                    rdfs:tags "Remote, airport, information, service, NOTAM D, short term" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Remote_ID
+:Remote_ID rdf:type owl:Class ;
+           rdfs:subClassOf :Traffic_Management ;
+           rdfs:comment "RID capabilites enhance safety and security by allowing the public, FAA, law enforcement, and other federal security agencies to remotely identify UAS flying in their jurisdiction. Government-qualified RID USSs support RID by receiving and processing network publish RID messages and responding to RID data queries from the general public and authorized officials (e.g., FAA, law enforcement officials)." ;
+           rdfs:label "Remote ID" ;
+           rdfs:seeAlso "https://www.faa.gov/sites/faa.gov/files/2022-08/UTM_ConOps_v2.pdf" ;
+           rdfs:tags "remote ID, FAA, security, identification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Restricted_Area
+:Restricted_Area rdf:type owl:Class ;
+                 rdfs:subClassOf :Special_Use_Airspace ;
+                 rdfs:comment """a) Restricted areas contain airspace identified by an area on the surface of the earth within which the flight of aircraft, while not wholly prohibited, is subject to restrictions. Activities within these areas must be confined because of their nature or limitations imposed upon aircraft operations that are not a part of those activities or both. Restricted areas denote the existence of unusual, often invisible, hazards to aircraft such as artillery firing, aerial gunnery, or guided missiles. Penetration of restricted areas without authorization from the using or controlling agency may be extremely hazardous to the aircraft and its occupants. Restricted areas are published in the Federal Register and constitute 14 CFR Part 73.
+
+b) ATC facilities apply the following procedures when aircraft are operating on an IFR clearance (including those cleared by ATC to maintain VFR‐on‐top) via a route which lies within joint‐use restricted airspace.
+
+     1) If the restricted area is not active and has been released to the controlling agency (FAA), the ATC facility will allow the aircraft to operate in the restricted airspace without issuing specific clearance for it to do so.
+
+     2) If the restricted area is active and has not been released to the controlling agency (FAA), the ATC facility will issue a clearance which will ensure the aircraft avoids the restricted airspace unless it is on an approved altitude reservation mission or has obtained its own permission to operate in the airspace and so informs the controlling facility.
+
+c) Permanent restricted areas are charted on Sectional Aeronautical, VFR Terminal Area, and the appropriate En Route charts.""" ;
+                 rdfs:label "Restricted Area" ;
+                 rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                 rdfs:tags "restricted, area, hazard" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Riot_Control_Agent
+:Riot_Control_Agent rdf:type owl:Class ;
+                    rdfs:subClassOf :Nonlethal_Weapon ;
+                    rdfs:comment "Riot control agents/tear gas are highly irritating agents normally used by law enforcement for crowd control or by individuals for protection (for example, mace)." ;
+                    rdfs:label "Riot Control Agent" ;
+                    rdfs:seeAlso "https://chemm.hhs.gov/riotcontrolagents.htm" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Route_Charting
+:Route_Charting rdf:type owl:Class ;
+                rdfs:subClassOf :Military_Training_Routes ;
+                rdfs:comment """a) IFR Enroute Low Altitude Chart. This chart will depict all IR routes and all VR routes that accommodate operations above 1,500 feet AGL.
+
+b) VFR Sectional Aeronautical Charts. These charts will depict military training activities such as IR and VR information.
+
+c) Area Planning (AP/1B) Chart (DoD Flight Information Publication-FLIP). This chart is published by the National Geospatial-Intelligence Agency (NGA) primarily for military users and contains detailed information on both IR and VR routes.""" ;
+                rdfs:label "Route Charting" ;
+                rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                rdfs:tags "route, charting" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Route_Identification
+:Route_Identification rdf:type owl:Class ;
+                      rdfs:subClassOf :Military_Training_Routes ;
+                      rdfs:comment """a) MTRs with no segment above 1,500 feet AGL must be identified by four number characters; e.g., IR1206, VR1207.
+
+b) MTRs that include one or more segments above 1,500 feet AGL must be identified by three number characters; e.g., IR206, VR207.
+
+c) Alternate IR/VR routes or route segments are identified by using the basic/principal route designation followed by a letter suffix, e.g., IR008A, VR1007B, etc.""" ;
+                      rdfs:label "Route Identification" ;
+                      rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                      rdfs:tags "route, identification, MTR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Runway_Status_Data
+:Runway_Status_Data rdf:type owl:Class ;
+                    rdfs:subClassOf :Interval_Data ;
+                    rdfs:comment "This class describes a temporally-dependent set of data about the operating status of a physical runway." ;
+                    rdfs:label "Runway Status Data" ;
+                    rdfs:tags "runway, status, data" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#SIGMET
+:SIGMET rdf:type owl:Class ;
+        rdfs:subClassOf :Inflight_Aviation_Weather_Advisories ;
+        rdfs:comment """A SIGMET is a concise description of the occurrence or expected occurrence of specified en route weather phenomena which is expected to affect the safety of aircraft operations.
+
+a) Are intended for dissemination to all pilots in flight to enhance safety.
+
+b) Are issued by the responsible MWO as soon as it is practical to alert operators and aircrews of hazardous en route conditions.
+
+c) Are unscheduled products that are valid for 4 hours; except SIGMETs associated with tropical cyclones and volcanic ash clouds are valid for 6 hours. Unscheduled updates and corrections are issued as necessary.
+
+d) Use geographical points to describe the hazardous weather areas. These points can reference either VORs, airports, or latitude-longitude, depending on SIGMET location. If the total area to be affected during the forecast period is very large, it could be that, in actuality, only a small portion of this total area would be affected at any one time.""" ;
+        rdfs:label "SIGMET" ;
+        rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html#:~:text=There%20are%20four%20types%20of,Center%20Weather%20Advisory%20(CWA)." ;
+        rdfs:tags "SIGMET, aircraft, safety, en route, weather, hazordous" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Sensor_Manufacturer
+:Sensor_Manufacturer rdf:type owl:Class ;
+                     rdfs:subClassOf :Manufacturer ;
+                     rdfs:comment "Manufactures components for aircraft" ;
+                     rdfs:label "Sensor Manufacturer" ;
+                     rdfs:tags "manufacturer, sensors, components, company, business, production" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Sensor_Operator
+:Sensor_Operator rdf:type owl:Class ;
+                 rdfs:subClassOf :Crew_Member ;
+                 rdfs:comment "Controls the on-board sensors and receives data and images. For many smaller UAS, this role is combined with that of the pilot/operator." ;
+                 rdfs:label "Sensor Operator" ;
+                 rdfs:seeAlso "AD1014109 Institude for Defense Analyses Staffing for Unmanned Aircraft Systems (UAS) Operations" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Sensors
+:Sensors rdf:type owl:Class ;
+         rdfs:subClassOf :Unmanned_Aircraft ;
+         rdfs:comment "In the broadest definition, a sensor is a device, module, machine, or subsystem that detects events or changes in its environment and sends the information to other electronics, frequently a computer processor" ;
+         rdfs:label "Sensors" ;
+         rdfs:seeAlso "https://en.wikipedia.org/wiki/Sensor#:~:text=In%20the%20broadest%20definition%2C%20a,electronics%2C%20frequently%20a%20computer%20processor." ;
+         rdfs:tags "sensors, detection, UAV, UAS, electronics, payload" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Sky_Condition
+:Sky_Condition rdf:type owl:Class ;
+               rdfs:subClassOf :Meteorological_Condition ;
+               rdfs:comment "The current of forecast sky conditions, including the ceiling and information on the cloud layers present." ;
+               rdfs:label "Sky Condition" ;
+               rdfs:tags "meteorology, sky" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Small_UAS
+:Small_UAS rdf:type owl:Class ;
+           rdfs:subClassOf :FAA_Classification ;
+           rdfs:comment "Part 107 sUAS. A regulatory first step for civil non-recreational UAS operations. To fly under 14 CFR Part 107, the UAS must weigh less than 55 pounds and the operator (called a remote pilot) must pass a knowledge test. Also, the UAS must be registered. Part 107 enabled the vast majority of routine sUAS operations, allowing flight within VLOS while maintaining flexibility to accommodate future technological innovations. Part 107 allows sUAS operations for many different purposes without requiring airworthiness certification, exemptions, or a COA for Class G airspace access. Part 107 includes the opportunity for individuals to request waivers for certain provisions of the rules, for example, Beyond Visual Line-Of-Sight (BVLOS). Part 107 also has specific restrictions which are not subject to waiver, such as the prohibition of the carriage or transport of Hazardous Materials (HAZMAT)." ;
+           rdfs:label "Small UAS" ;
+           rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap11_section_2.html" ;
+           rdfs:tags "Group 1, FAA UAS, classification, small UAS" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Special_Use_Airspace
+:Special_Use_Airspace rdf:type owl:Class ;
+                      rdfs:subClassOf :Airspace ;
+                      rdfs:comment "Special use airspace (SUA) consists of that airspace wherein activities must be confined because of their nature, or wherein limitations are imposed upon aircraft operations that are not a part of those activities, or both." ;
+                      rdfs:label "Special Use Airspace" ;
+                      rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+                      rdfs:tags "special, use, airspace" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Stand-alone_Weather_Station
+:Stand-alone_Weather_Station rdf:type owl:Class ;
+                             rdfs:subClassOf :METAR_Reporting_Station ;
+                             rdfs:comment "A non-airport where operational weather monitoring hardware is installed." ;
+                             rdfs:label "Stand-alone Weather Station" ;
+                             rdfs:tags "weather station" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Standing
+:Standing rdf:type owl:Class ;
+          rdfs:subClassOf :Flight-phase ;
+          rdfs:comment """Prior to pushback or taxi, or after arrival, at the gate, ramp, or parking area, while the aircraft is stationary. This phase includes:
+
+Engine(s) Not Operating, Engine(s) Start-up, Engine(s) Operating, Engine(s) Shut Down.
+
+Engine shutdown is from the start of the shutdown sequence until the engine(s)
+cease rotation..""" ;
+          rdfs:label "Standing" ;
+          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+          rdfs:tags "standing" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Subchapter_C
+:Subchapter_C rdf:type owl:Class ;
+              rdfs:subClassOf :Chapter_1 ;
+              rdfs:comment "Subchapter C includes federal regulations and authorizations for aircraft. This includes parts 21 through 49 of Title 14 found in chapter 1." ;
+              rdfs:label "Subchapter C" ;
+              rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C" ;
+              rdfs:tags "Aircraft, chapter 1, subchapter, C, regulation, authorization" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Subchapter_D
+:Subchapter_D rdf:type owl:Class ;
+              rdfs:subClassOf :Chapter_1 ;
+              rdfs:comment "Subchapter D includes federal regulations and authorizations for airmen. This includes parts 60 through 68 of Title 14 found in chapter 1." ;
+              rdfs:label "Subchapter D" ;
+              rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D" ;
+              rdfs:tags "airmen, regulation, authorization" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Subchapter_F
+:Subchapter_F rdf:type owl:Class ;
+              rdfs:subClassOf :Chapter_1 ;
+              rdfs:comment "Subchapter C includes federal regulations and authorizations for air traffic and general operating rules. This includes parts 89 through 107 of Title 14 found in chapter 1." ;
+              rdfs:label "Subchapter F" ;
+              rdfs:seeAlso "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F" ;
+              rdfs:tags "Air traffic, chapter 1, subchapter, F, regulation, authorization" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Surface_Wind_Condition
+:Surface_Wind_Condition rdf:type owl:Class ;
+                        rdfs:subClassOf :Meteorological_Condition ;
+                        rdfs:comment "The current or forecast surface wind conditions." ;
+                        rdfs:label "Surface Wind Condition" ;
+                        rdfs:tags "meteorology, wind" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#TAF
+:TAF rdf:type owl:Class ;
+     rdfs:subClassOf :Meteorological_Status_Data ;
+     rdfs:comment """In meteorology and aviation, terminal aerodrome forecast (TAF) is a format for reporting weather forecast information,[1] particularly as it relates to aviation. TAFs are issued at least four times a day, every six hours, for major civil airfields: 0000, 0600, 1200 and 1800 UTC,[2] and generally apply to a 24- or 30-hour period, and an area within approximately five statute miles (8.0 km) (or 5 nautical miles (9.3 km) in Canada) from the center of an airport runway complex.
+
+TAFs are issued every three hours for military airfields and some civil airfields and cover a period ranging from 3 hours to 30 hours.""" ;
+     rdfs:label "TAF" ;
+     rdfs:tags "TAF, forecast, terminal, meteorology, aviation" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Takeoff
+:Takeoff rdf:type owl:Class ;
+         rdfs:subClassOf :Flight-phase ;
+         rdfs:comment "From the application of takeoff power, through rotation and to an altitude of 35 feet above runway elevation." ;
+         rdfs:label "Takeoff" ;
+         rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+         rdfs:tags "takeoff" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Taxi
+:Taxi rdf:type owl:Class ;
+      rdfs:subClassOf :Flight-phase ;
+      rdfs:comment """The aircraft is moving on the aerodrome surface under its own power prior to takeoff or after landing. Includes the subphases Power Back, Taxi to Runway, Taxi to Takeoff Position, Taxi from Runway.
+
+Usage Notes: Throughout this document the term runway or landing area is taken in its broadest sense and includes runways, landing strips, waterways, unimproved landing areas, and landing pads, (which may include offshore platforms, building roofs, roads, ships, and fields), or other intended landing areas. Taxiing includes air taxiing for rotorcraft.""" ;
+      rdfs:label "Taxi" ;
+      rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+      rdfs:tags "taxi, runway, landing strip, waterways, landing pad" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Taxi_from_Runway
+:Taxi_from_Runway rdf:type owl:Class ;
+                  rdfs:subClassOf :Taxi ;
+                  rdfs:comment "Commences when the aircraft begins to move under its own power leaving the gate, ramp, apron, or parking area, and terminates upon reaching the runway." ;
+                  rdfs:label "Taxi from Runway" ;
+                  rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Taxi_to_Runway
+:Taxi_to_Runway rdf:type owl:Class ;
+                rdfs:subClassOf :Taxi ;
+                rdfs:comment "Commences when the aircraft begins to move under its own power leaving the gate, ramp, apron, or parking area, and terminates upon reaching the runway." ;
+                rdfs:label "Taxi to Runway" ;
+                rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Taxi_to_Takeoff_Position
+:Taxi_to_Takeoff_Position rdf:type owl:Class ;
+                          rdfs:subClassOf :Taxi ;
+                          rdfs:comment "From entering the runway until reaching the takeoff position." ;
+                          rdfs:label "Taxi to Takeoff Position" ;
+                          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Temporary_Flight_Restrictions
+:Temporary_Flight_Restrictions rdf:type owl:Class ;
+                               rdfs:subClassOf :Other_Airspace ;
+                               rdfs:comment "A Temporary Flight Restriction (TFR) is a type of Notices to Airmen (NOTAM). A TFR defines an area restricted to air travel due to a hazardous condition, a special event, or a general warning for the entire FAA airspace. The text of the actual TFR contains the fine points of the restriction." ;
+                               rdfs:label "Temporary Flight Restrictions" ;
+                               rdfs:seeAlso "https://tfr.faa.gov/tfr2/about.jsp" ;
+                               rdfs:tags "TFR, NOTAM, temporary, restriction" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Terminal_Radar_Service_Area
+:Terminal_Radar_Service_Area rdf:type owl:Class ;
+                             rdfs:subClassOf :Other_Airspace ;
+                             rdfs:comment """a) TRSAs were originally established as part of the Terminal Radar Program at selected airports. TRSAs were never controlled airspace from a regulatory standpoint because the establishment of TRSAs was never subject to the rulemaking process; consequently, TRSAs are not contained in 14 CFR Part 71 nor are there any TRSA operating rules in 14 CFR Part 91. Part of the Airport Radar Service Area (ARSA) program was to eventually replace all TRSAs. However, the ARSA requirements became relatively stringent and it was subsequently decided that TRSAs would have to meet ARSA criteria before they would be converted. TRSAs do not fit into any of the U.S. airspace classes; therefore, they will continue to be non-Part 71 airspace areas where participating pilots can receive additional radar services which have been redefined as TRSA Service.
+
+b) The primary airport(s) within the TRSA become(s) Class D airspace. The remaining portion of the TRSA overlies other controlled airspace which is normally Class E airspace beginning at 700 or 1,200 feet and established to transition to/from the en route/terminal environment.
+
+c) Participation. Pilots operating under VFR are encouraged to contact the radar approach control and avail themselves of the TRSA Services. However, participation is voluntary on the part of the pilot. See Chapter 4, Air Traffic Control, for details and procedures.
+
+d) Charts. TRSAs are depicted on VFR sectional and terminal area charts with a solid black line and altitudes for each segment. The Class D portion is charted with a blue segmented line.""" ;
+                             rdfs:label "Terminal Radar Service Area" ;
+                             rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                             rdfs:tags "Terminal, radar, service" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Traffic_Management
+:Traffic_Management rdf:type owl:Class ;
+                    rdfs:comment "Traffic flow management (TFM), sometimes referred to as air traffic management, is a function of air traffic control (ATC). It is, however, distinct in that the goal of TFM is to control the overall flow of traffic in the national airspace system rather than control specific flights. TFM involves taking a higher-level view of air traffic." ;
+                    rdfs:label "Traffic Management" ;
+                    rdfs:seeAlso "https://nbaa.org/aircraft-operations/airspace/tfm/" ;
+                    rdfs:tags "traffic flow, management, TFM, ATC, flying, takeoff, landing" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#UAS_Classification
+:UAS_Classification rdf:type owl:Class ;
+                    rdfs:comment "Includes DoD and FAA classifications of UAS" ;
+                    rdfs:label "UAS Classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#UAS_Operation
+:UAS_Operation rdf:type owl:Class ;
+               rdfs:comment "Operation procedures when operating a UAS" ;
+               rdfs:label "UAS Operation" ;
+               rdfs:tags "UAS operation, unmanned aerial system" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#UAS_Service_Supplier
+:UAS_Service_Supplier rdf:type owl:Class ;
+                      rdfs:subClassOf :Traffic_Management ;
+                      rdfs:comment """A UAS Service Supplier (USS) is an entity that assists UAS Operators with meeting UTM operational requirements that enable
+safe and efficient use of airspace.
+
+A USS 
+(1) acts as a communications bridge between federated UTM
+actors to support Operators’ abilities to meet the regulatory and operational requirements for UAS operations
+
+(2) provides the Operator with information about planned operations in and around a volume of airspace so that Operators can ascertain the ability to safely and efficiently conduct the mission
+
+(3) archives operations data in historical databases for analytics, regulatory, and Operator accountability purposes. In general, these key functions allow for a network of USSs to provide cooperative management
+of low altitude operations without direct FAA involvement.""" ;
+                      rdfs:label "UAS Service Supplier" ;
+                      rdfs:seeAlso "https://www.faa.gov/sites/faa.gov/files/2022-08/UTM_ConOps_v2.pdf" ;
+                      rdfs:tags "UAS, USS, UAV, unmanned aerial vehicle, unmanned aerial system, airspace, safety, traffic management" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#UAS_Supplemental_Data_Service_Providers
+:UAS_Supplemental_Data_Service_Providers rdf:type owl:Class ;
+                                         rdfs:subClassOf :Traffic_Management ;
+                                         rdfs:comment "Operators and USSs can access Supplemental Data Service Providers (SDSPs) for essential or enhanced services - including terrain and obstacle data, specialized weather data, surveillance, and constraint information. SDSPs may connect to the USS Network or directly to Operators through other means (e.g., public/private internet sites)." ;
+                                         rdfs:label "UAS Supplemental Data Service Providers" ;
+                                         rdfs:seeAlso "https://www.faa.gov/sites/faa.gov/files/2022-08/UTM_ConOps_v2.pdf" ;
+                                         rdfs:tags "UAS, UAV, unmanned aerial system, unmanned aerial vehicle, service, traffic management" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#USS_Network
+:USS_Network rdf:type owl:Class ;
+             rdfs:subClassOf :Traffic_Management ;
+             rdfs:comment "The term ‘USS Network’ is the amalgamation of USSs connected to each other, exchanging information on behalf of subscribed Operators. The USS Network shares operational intent data, airspace constraint information, and other relevant details across the network to ensure shared situational awareness for UTM participants. In the UTM construct, multiple USSs can operate in the same geographical area. The USS Network must implement a shared paradigm, with industry agreed upon methods for de-confliction and/ or negotiation, and standards for the efficient and effective transmission of intent and changes to intent. This reduces risk to Operators and improves the overall capacity and efficiency in the shared space. The USS Network is also expected to facilitate the ready availability of data to the FAA and other entities as required to ensure safe operation of the NAS, and any other collective information sharing functions, including security and identification." ;
+             rdfs:label "USS Network" ;
+             rdfs:seeAlso "https://www.faa.gov/sites/faa.gov/files/2022-08/UTM_ConOps_v2.pdf" ;
+             rdfs:tags "USS, network, service, UAS, UAV, unmanned aerial system, unmanned aerial vehicle, traffic management" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Uncontrolled_Airspace
+:Uncontrolled_Airspace rdf:type owl:Class ;
+                       rdfs:subClassOf :Airspace ;
+                       rdfs:comment "Class G airspace (uncontrolled) is that portion of airspace that has not been designated as Class A, Class B, Class C, Class D, or Class E airspace." ;
+                       rdfs:label "Uncontrolled Airspace" ;
+                       rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_3.html" ;
+                       rdfs:tags "Class G, uncontrolled" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Uncontrolled_Descent
+:Uncontrolled_Descent rdf:type owl:Class ;
+                      rdfs:subClassOf :Flight-phase ;
+                      rdfs:comment """A descent during any airborne phase in which the aircraft does not sustain controlled flight.
+
+Usage Notes: For unmanned aircraft, includes any portion of the flight after intentional or unintentional termination of flight, such as following system/component malfunction or failure or loss of control in flight.""" ;
+                      rdfs:label "Uncontrolled Descent" ;
+                      rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                      rdfs:tags "airborne, uncontrolled, descent" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Unknown
+:Unknown rdf:type owl:Class ;
+         rdfs:subClassOf :Flight-phase ;
+         rdfs:comment "Phase of flight is not discernible from the information available." ;
+         rdfs:label "Unknown" ;
+         rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+         rdfs:tags "unavailable, unknown" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Unmanned_Aircraft
+:Unmanned_Aircraft rdf:type owl:Class ;
+                   rdfs:subClassOf :Unmanned_Aircraft_System ;
+                   rdfs:comment "An aircraft that does not carry a human operator and is capable of flight with or without human remote control. Also known as a UA or UAV" ;
+                   rdfs:label "Unmanned Aircraft" ;
+                   rdfs:seeAlso "CFR Title 14 Chapter I Subchapter A Part 1" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Unmanned_Aircraft_System
+:Unmanned_Aircraft_System rdf:type owl:Class ;
+                          rdfs:comment "A UAS is an unmanned aircraft system. It includes associated elements (including communication link and the components that control the unmanned aircraft) that are required for the safe and efficient operation of the unmanned aircraft in the airspace of the United States." ;
+                          rdfs:label "Unmanned Aircraft System" ;
+                          rdfs:seeAlso "CFR Title 14 CH I Subchapter A Part 1" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#VFR_Corridors
+:VFR_Corridors rdf:type owl:Class ;
+               rdfs:subClassOf :Published_VFR_Routes ;
+               rdfs:comment """1) The design of a few of the first Class B airspace areas provided a corridor for the passage of uncontrolled traffic. A VFR corridor is defined as airspace through Class B airspace, with defined vertical and lateral boundaries, in which aircraft may operate without an ATC clearance or communication with air traffic control.
+
+2) These corridors are, in effect, a “hole” through Class B airspace. (See FIG 3-5-2.) A classic example would be the corridor through the Los Angeles Class B airspace, which has been subsequently changed to Special Flight Rules airspace (SFR). A corridor is surrounded on all sides by Class B airspace and does not extend down to the surface like a VFR Flyway. Because of their finite lateral and vertical limits, and the volume of VFR traffic using a corridor, extreme caution and vigilance must be exercised.
+
+3) Because of the heavy traffic volume and the procedures necessary to efficiently manage the flow of traffic, it has not been possible to incorporate VFR corridors in the development or modifications of Class B airspace in recent years.""" ;
+               rdfs:label "VFR Corridors" ;
+               rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+               rdfs:tags "Class B, VFR, ATC clearance, hole" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#VFR_Flyways
+:VFR_Flyways rdf:type owl:Class ;
+             rdfs:subClassOf :Published_VFR_Routes ;
+             rdfs:comment """a) VFR Flyways and their associated Flyway Planning Charts were developed from the recommendations of a National Airspace Review Task Group. A VFR Flyway is defined as a general flight path not defined as a specific course, for use by pilots in planning flights into, out of, through or near complex terminal airspace to avoid Class B airspace. An ATC clearance is NOT required to fly these routes.
+
+b) VFR Flyways are depicted on the reverse side of some of the VFR Terminal Area Charts (TAC), commonly referred to as Class B airspace charts. (See FIG 3-5-1.) Eventually all TACs will include a VFR Flyway Planning Chart. These charts identify VFR flyways designed to help VFR pilots avoid major controlled traffic flows. They may further depict multiple VFR routings throughout the area which may be used as an alternative to flight within Class B airspace. The ground references provide a guide for improved visual navigation. These routes are not intended to discourage requests for VFR operations within Class B airspace but are designed solely to assist pilots in planning for flights under and around busy Class B airspace without actually entering Class  B airspace.
+
+c) It is very important to remember that these suggested routes are not sterile of other traffic. The entire Class B airspace, and the airspace underneath it, may be heavily congested with many different types of aircraft. Pilot adherence to VFR rules must be exercised at all times. Further, when operating beneath Class B airspace, communications must be established and maintained between your aircraft and any control tower while transiting the Class B, Class C, and Class D surface areas of those airports under Class B airspace.""" ;
+             rdfs:label "VFR Flyways" ;
+             rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+             rdfs:tags "VFR, flyway, planning, general flight path, traffic avoidance" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#VFR_Military_Training_Routes
+:VFR_Military_Training_Routes rdf:type owl:Class ;
+                              rdfs:subClassOf :Military_Training_Routes ;
+                              rdfs:comment "Operations on these routes are conducted in accordance with VFR except flight visibility must be 5 miles or more; and flights must not be conducted below a ceiling of less than 3,000 feet AGL." ;
+                              rdfs:label "VFR Military Training Routes" ;
+                              rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                              rdfs:tags "military, training, VFR" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Visibility_Condition
+:Visibility_Condition rdf:type owl:Class ;
+                      rdfs:subClassOf :Meteorological_Condition ;
+                      rdfs:comment "The current or forecast surface visibility conditions at a given airport or other reporting station." ;
+                      rdfs:label "Visibility Condition" ;
+                      rdfs:tags "meteorology, visbility" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Visual_Observer
+:Visual_Observer rdf:type owl:Class ;
+                 rdfs:subClassOf :Crew_Member ;
+                 rdfs:comment "A person who is designated by the remote pilot in command to assist the remote pilot in command and the person manipulating the flight controls of the UAS to see and avoid other air traffic or objects aloft or on the ground." ;
+                 rdfs:label "Visual Observer" ;
+                 rdfs:seeAlso "CFR 14 Chapter 1 Subchapter F Part 107 Small Unmanned Aircraft Systems" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Warning_Area
+:Warning_Area rdf:type owl:Class ;
+              rdfs:subClassOf :Special_Use_Airspace ;
+              rdfs:comment "A warning area is airspace of defined dimensions, extending from three nautical miles outward from the coast of the U.S., that contains activity that may be hazardous to nonparticipating aircraft. The purpose of such warning areas is to warn nonparticipating pilots of the potential danger. A warning area may be located over domestic or international waters or both." ;
+              rdfs:label "Warning Area" ;
+              rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html#:~:text=Special%20use%20airspace%20(SUA)%20consists,of%20those%20activities%2C%20or%20both." ;
+              rdfs:tags "warning, area" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Weapon
+:Weapon rdf:type owl:Class ;
+        rdfs:subClassOf :Payload ;
+        rdfs:comment "When a weapon is placed on a drone's payload, the drone is considered a combat drone. The drone may fire lethal or non-lethal weapons intended to slow down, obstruct, or incapacitate a target." ;
+        rdfs:label "Weapon" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Weather_Condition
+:Weather_Condition rdf:type owl:Class ;
+                   rdfs:subClassOf :Meteorological_Condition ;
+                   rdfs:comment "The current of forecast weather conditions at a given airport or other reporting station." ;
+                   rdfs:label "Weather Condition" ;
+                   rdfs:tags "meteorology, forecast, weather" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Weight-shift-control_Aircraft
+:Weight-shift-control_Aircraft rdf:type owl:Class ;
+                               rdfs:subClassOf :Aircraft ;
+                               rdfs:comment "Weight-shift control as a means of aircraft flight control is widely used in hang gliders, powered hang gliders, and ultralight trikes." ;
+                               rdfs:label "Weight-shift Control Aircraft" ;
+                               rdfs:seeAlso "https://en.wikipedia.org/wiki/Weight-shift_control" ;
+                               rdfs:tags "aircraft, weight-shift control aircraft, gliders, classification" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport_Advisory/Information_Services
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Airport_Advisory/Information_Services> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf :Other_Airspace ;
+                                                                                                rdfs:comment """a) Includes two advisory type services: Local Airport Advisory (LAA) and Remote Airport Information Service (RAIS)
+
+b) It is not mandatory that pilots participate in the Airport Advisory programs. Participation enhances safety for everyone operating around busy GA airports; therefore, everyone is encouraged to participate and provide feedback that will help improve the program.""" ;
+                                                                                                rdfs:label "Airport Advisory/Information Services" ;
+                                                                                                rdfs:seeAlso "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html" ;
+                                                                                                rdfs:tags "Airport, advisory, information, local, remote" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Pushback/towing
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Pushback/towing> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf :Flight-phase ;
+                                                                          rdfs:comment """Aircraft is moving in the gate, ramp, or parking area, assisted by a tow vehicle (tug).
+
+This phase of flight includes the following subphases: Assisted, Engine(s) Not Operating, Assisted, Engine(s) Start-up, Assisted, Engine(s) Operating, Assisted, Engine(s) Shut Down.
+
+Usage Notes: Unassisted movement in the gate or ramp area is included in the Taxi (TXI) phase, Engine shutdown is from the start of the shutdown sequence until the engine(s) cease rotation.""" ;
+                                                                          rdfs:label "Pushback/towing" ;
+                                                                          rdfs:seeAlso "https://www.ntsb.gov/safety/data/Documents/datafiles/PhaseofFlightDefinitions.pdf" ;
+                                                                          rdfs:tags "pushback, towing, gate, ramp, parking, parked, tow vehicle" .
+
+
+###  http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Intruder
+<http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Intruder> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf :UAS_Operation ;
+                                                                   rdfs:comment "Any aircraft that invades the operational volume of the UAS operation" ;
+                                                                   rdfs:label "Intruder" ;
+                                                                   rdfs:tags "intruder, UAS, operation, aircraft" .
+
+
+###  http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Ownship
+<http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Ownship> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf :UAS_Operation ;
+                                                                  rdfs:comment "One's own aircraft" ;
+                                                                  rdfs:label "Ownship" ;
+                                                                  rdfs:tags "ownship, aircraft" .
+
+
+###  http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Personnel
+<http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Personnel> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :UAS_Operation ;
+                                                                    rdfs:label "Personnel" .
+
+
+###  http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Pilot
+<http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Pilot> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Personnel> ;
+                                                                rdfs:label "Pilot" .
+
+
+###  https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC
+<https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :NAS_Facility ;
+                                                     rdfs:comment "Air route traffic control centers (ARTCC) - There is one ARTCC for each center. Each ARTCC manages traffic within all sectors of its center except for TRACON airspace and local-airport airspace." ;
+                                                     rdfs:label "ARTCC" ;
+                                                     rdfs:seeAlso "https://science.howstuffworks.com/transport/flight/modern/air-traffic-control.htm" ;
+                                                     rdfs:tags "air traffic route control, ARTCC" .
+
+
+###  https://data.nasa.gov/ontologies/atmonto/NAS#ATCSCC
+<https://data.nasa.gov/ontologies/atmonto/NAS#ATCSCC> rdf:type owl:Class ;
+                                                      rdfs:subClassOf :NAS_Facility ;
+                                                      rdfs:comment "Air Traffic Control System Command Center (ATCSCC) - The ATCSCC oversees all air traffic control. It also manages air traffic control within centers where there are problems (bad weather, traffic overloads, inoperative runways)." ;
+                                                      rdfs:label "ATCSCC" ;
+                                                      rdfs:seeAlso "https://science.howstuffworks.com/transport/flight/modern/air-traffic-control.htm" ;
+                                                      rdfs:tags "ATCSCC, air traffic control system command center, weather" .
+
+
+###  https://data.nasa.gov/ontologies/atmonto/NAS#ATCT
+<https://data.nasa.gov/ontologies/atmonto/NAS#ATCT> rdf:type owl:Class ;
+                                                    rdfs:subClassOf :NAS_Facility ;
+                                                    rdfs:comment "Air traffic control tower (ATCT) - An ATCT is located at every airport that has regularly scheduled flights. Towers handle all takeoff, landing, and ground traffic" ;
+                                                    rdfs:label "ATCT" ;
+                                                    rdfs:seeAlso "https://science.howstuffworks.com/transport/flight/modern/air-traffic-control.htm" ;
+                                                    rdfs:tags "atct, air traffic control tower, traffic management, takeoff, landing" .
+
+
+###  https://data.nasa.gov/ontologies/atmonto/NAS#Airport
+<https://data.nasa.gov/ontologies/atmonto/NAS#Airport> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :NAS_Facility ;
+                                                       rdfs:comment "A facility where regularly-scheduled aircraft arrive and depart." ;
+                                                       rdfs:label "Airport" ;
+                                                       rdfs:tags "airport, NAS, flying" .
+
+
+###  https://data.nasa.gov/ontologies/atmonto/NAS#TRACON
+<https://data.nasa.gov/ontologies/atmonto/NAS#TRACON> rdf:type owl:Class ;
+                                                      rdfs:subClassOf :NAS_Facility ;
+                                                      rdfs:comment "Terminal radar approach control - TRACON handles departing and approaching aircraft within its space." ;
+                                                      rdfs:label "TRACON" ;
+                                                      rdfs:seeAlso "https://science.howstuffworks.com/transport/flight/modern/air-traffic-control.htm" ;
+                                                      rdfs:tags "terminal radar approach control, TRACON, aircraft, traffic flow" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#AAI_MQ-19_Aerosonde
+:AAI_MQ-19_Aerosonde rdf:type owl:NamedIndividual ,
+                              :Group_2 ,
+                              :Large_UAS ,
+                              :Unmanned_Aircraft ;
+                     rdfs:comment "The Aerosonde was originally developed as a very long endurance low-cost mini-UAV for meteorological observations in remote areas. Between 1995 in 1998, the UAV was developed in Australia by two Australian companies, the Australian Bureau of Meteorology, and the Insitu Group from the USA." ;
+                     rdfs:label "AAI MQ-19 Aerosonde" ,
+                                "Aerosonde" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Buster
+:Buster rdf:type owl:NamedIndividual ,
+                 :Group_1 ,
+                 :Large_UAS ,
+                 :Unmanned_Aircraft ;
+        rdfs:comment "Buster is a small unmanned air system developed by Mission Technologies, Inc.  The 15 pound, joined-wing airframe has a single tractor propeller.  The aircraft can transmit real time video from its dual EO/IR sensors during missions lasting up to four hours and 20 nautical miles away from its launch position." ;
+        rdfs:label "Buster" ;
+        rdfs:seeAlso "http://www.navaldrones.com/Buster.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#FQM-151_Pointer
+:FQM-151_Pointer rdf:type owl:NamedIndividual ,
+                          :Group_1 ,
+                          :Large_UAS ,
+                          :Unmanned_Aircraft ;
+                 rdfs:comment "The FQM-151 Pointer is a very small hand-launched mini-UAV for real-time video surveillance. It is used by the U.S. Army and U.S. Marine Corps." ;
+                 rdfs:label "FQM-151 Pointer" ;
+                 rdfs:seeAlso "https://www.designation-systems.net/dusrm/m-151.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-1C_Gray_Eagle
+:MQ-1C_Gray_Eagle rdf:type owl:NamedIndividual ,
+                           :Group_4 ,
+                           :Large_UAS ,
+                           :Unmanned_Aircraft ;
+                  rdfs:comment "An essential element of the U.S. Army's Aviation Modernization Plan, GA-ASI's Gray Eagle Unmanned Aircraft System (UAS) is an innovative and technologically advanced derivative of the combat-proven Predator®. Gray Eagle offers a reliable, affordable, low-risk, and compelling next-generation tactical UAS solution to meet challenging service requirements for persistent Reconnaissance, Surveillance, and Target Acquisition (RSTA) and attack operations." ;
+                  rdfs:label "MQ-1C Gray Eagle" ;
+                  rdfs:seeAlso "https://www.ga-asi.com/remotely-piloted-aircraft/gray-eagle" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-27_ScanEagle
+:MQ-27_ScanEagle rdf:type owl:NamedIndividual ,
+                          :Group_2 ,
+                          :Large_UAS ,
+                          :Unmanned_Aircraft ;
+                 rdfs:comment "The ScanEagle is a miniature UAV derived from the Insitu SeaScan commercial ship-based surveillance mini-UAV, which has been under development since the late 1990s. In February 2002, Boeing and the Insitu Group signed an agreement to co-develop ScanEagle, and in June that year the ScanEagle UAV conducted its first autonomous flight." ;
+                 rdfs:label "MQ-27 ScanEagle" ;
+                 rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-27.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-5B_Hunter
+:MQ-5B_Hunter rdf:type owl:NamedIndividual ,
+                       :Group_4 ,
+                       :Large_UAS ,
+                       :Unmanned_Aircraft ;
+              rdfs:comment "In 2003, Northrop Grumman purchased the Hunter program from TRW. Subsequently, the company developed the MQ-5B, a Hunter variant which has been further optimized for the multi-mission role. It first flew in July 2005. The MQ-5B has a longer center-wing section, increasing the span by about 1.5 m (5 ft). This ensures proper clearance of the landing gear when dropping the BAT weapon. Additionally, the longer wing provides for a higher ceiling, and holds more fuel for increased endurance. The MQ-5B is also fitted with improved avionics and Mercedes Benz heavy-fuel engines. The U.S. Army has ordered 18 MQ-5B aircraft, which are expected to remain in service until at least 2009." ;
+              rdfs:label "MQ-5B Hunter" ;
+              rdfs:seeAlso "https://www.designation-systems.net/dusrm/m-155.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-8B_Fire_Scout
+:MQ-8B_Fire_Scout rdf:type owl:NamedIndividual ,
+                           :Group_4 ,
+                           :Large_UAS ,
+                           :Unmanned_Aircraft ;
+                  rdfs:comment "In January 2004 the MQ-8B (designated as such in June 2005), generally similar to the Sea Scout proposal, has been selected by the U.S. Army for its FCS UAS (Future Combat System Unmanned Aerial System) requirement. Compared to the RQ-8A, the MQ-8B features a new four-blade main rotor with improved airfoils and has increased payload capacity and endurance. The U.S. Navy has selected the MQ-8B to support its LCS (Littoral Combat Ship) vessels, and the total (Army/Navy combined) requirement is for up to 192 MQ-8B aircraft." ;
+                  rdfs:label "MQ-8B Fire Scout" ;
+                  rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-8.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-9_Reaper
+:MQ-9_Reaper rdf:type owl:NamedIndividual ,
+                      :Group_5 ,
+                      :Large_UAS ,
+                      :Unmanned_Aircraft ;
+             rdfs:comment "The Predator B is a larger and more powerful derivative of General Atomics Aeronautical Systems Inc.'s (GA-ASI) successful RQ/MQ-1 Predator multi-mission UAV. Development was begun as a private venture in 1998, but was eventually funded by NASA. The first flight of the prototype occurred in February 2001." ;
+             rdfs:label "MQ-9 Reaper" ;
+             rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-9.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Nighthawk
+:Nighthawk rdf:type owl:NamedIndividual ,
+                    :Group_1 ,
+                    :Large_UAS ,
+                    :Unmanned_Aircraft ;
+           rdfs:comment "Nighthawk, formerly known as BatCam or Tacmav, is a miniature, foldable unmanned aerial system, is a third generation micro-UAV developed at Applied Research Associates (ARA)." ;
+           rdfs:label "Nighthawk" ;
+           rdfs:seeAlso "https://defense-update.com/20071028_nighthawk.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_0a7bd1e1_37a9_4ab3_8764_3811b20c1952
+:OWLNamedIndividual_0a7bd1e1_37a9_4ab3_8764_3811b20c1952 rdf:type owl:NamedIndividual ,
+                                                                  :Aircraft_Manufacturer ,
+                                                                  :Manufacturer ;
+                                                         rdfs:comment "\"We specialize in defense tech, solving complex challenges, advancing scientific discovery and delivering innovative solutions that help our customers keep people safe.\" -Lockheed Martin" ;
+                                                         rdfs:label "Lockheed Martin"@en ;
+                                                         rdfs:seeAlso "https://www.lockheedmartin.com/en-us/who-we-are.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_2944c7cb_8020_401e_81d4_71ce7bf80301
+:OWLNamedIndividual_2944c7cb_8020_401e_81d4_71ce7bf80301 rdf:type owl:NamedIndividual ,
+                                                                  :Active ,
+                                                                  :Electro_Optical ,
+                                                                  :Jammers ,
+                                                                  :Radar ,
+                                                                  :Sensors ;
+                                                         rdfs:comment "Counter-drone system that provides highly effective detection, tracking and neutralization of drone threats for military and security forces." ;
+                                                         rdfs:label "KAPAN Counter-UAS System"@en ;
+                                                         rdfs:seeAlso "https://www.unmannedsystemstechnology.com/company/meteksan-defense/kapan-counter-uas-system/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_2bfbed19_40df_43db_9279_43ed286143c3
+:OWLNamedIndividual_2bfbed19_40df_43db_9279_43ed286143c3 rdf:type owl:NamedIndividual ,
+                                                                  :Aircraft ,
+                                                                  :Jet_Aircraft ;
+                                                         rdfs:comment "The General Dynamics F-16 Fighting Falcon is an American single-engine supersonic multirole fighter aircraft originally developed by General Dynamics for the United States Air Force (USAF)." ;
+                                                         rdfs:label "F-16 Fighting Falcon"@en ;
+                                                         rdfs:seeAlso "https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_36876e9a_1999_45ec_84e0_de5daf11baeb
+:OWLNamedIndividual_36876e9a_1999_45ec_84e0_de5daf11baeb rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rocket> ,
+                                                                  :Aircraft ;
+                                                         rdfs:comment "All rockets take off; not all rockets land. Named after astronaut Alan Shepard, the first American in space, New Shepard is Blue Origin’s fully reusable, suborbital rocket system built for human flight from the beginning. During the 11-minute journey, astronauts soar past the Kármán line (100 km/62 miles), the internationally recognized boundary of space, experiencing several minutes of weightlessness and witnessing life-changing views of Earth. The vehicle is fully autonomous—there are no pilots." ;
+                                                         rdfs:label "New Shepard"@en ;
+                                                         rdfs:seeAlso "https://www.blueorigin.com/new-shepard" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_44f86871_e8a4_44c1_8ab8_82f3f3153056
+:OWLNamedIndividual_44f86871_e8a4_44c1_8ab8_82f3f3153056 rdf:type owl:NamedIndividual ,
+                                                                  :Aircraft_Manufacturer ,
+                                                                  :Manufacturer ;
+                                                         rdfs:comment "Blue Origin was founded with a vision of millions of people living and working in space for the benefit of Earth. Blue Origin envisions a time when people can tap into the limitless resources of space and enable the movement of damaging industries into space to preserve Earth, humanity’s blue origin." ;
+                                                         rdfs:label "Blue Origin"@en ;
+                                                         rdfs:seeAlso "https://www.blueorigin.com/about-blue" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_5c92bc55_41f3_480c_8713_beae13efd3e7
+:OWLNamedIndividual_5c92bc55_41f3_480c_8713_beae13efd3e7 rdf:type owl:NamedIndividual ,
+                                                                  :Aircraft_Manufacturer ,
+                                                                  :Manufacturer ;
+                                                         rdfs:comment "As a leading global aerospace company, Boeing develops, manufactures and services commercial airplanes, defense products and space systems for customers in more than 150 countries." ;
+                                                         rdfs:label "Boeing"@en ;
+                                                         rdfs:seeAlso "https://www.boeing.com/company#general-information" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_6aac976b_8a1c_4a1f_b77e_c851480905f6
+:OWLNamedIndividual_6aac976b_8a1c_4a1f_b77e_c851480905f6 rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Airplane> ,
+                                                                  :Aircraft ,
+                                                                  :Jet_Aircraft ;
+                                                         rdfs:comment "The Boeing 777's unique combination of superior range, outstanding fuel efficiency and passenger-preferred comfort has created long-range success for carriers around the world. And the 777-300ER now gives operators a perfect opportunity to extend that success. Recent upgrades further reduce costs and boost revenue, and the 777's flying experience is still number one with passengers. A more profitable fleet and more satisfied passengers. That's a better way to fly." ;
+                                                         rdfs:label "Boeing 777"@en ;
+                                                         rdfs:seeAlso "https://www.boeing.com/commercial/777#Anchor2" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_7661ab81_1c4b_4a32_8159_81e1a2d248eb
+:OWLNamedIndividual_7661ab81_1c4b_4a32_8159_81e1a2d248eb rdf:type owl:NamedIndividual ,
+                                                                  :Passive ,
+                                                                  :Radar ,
+                                                                  :Sensors ;
+                                                         rdfs:comment "multi-tiered drone detection and defense solution that incorporates three different technologies into a flexible and highly customizable platform that can be tailored to specific security requirements." ;
+                                                         rdfs:label "Drone Watcher"@en ;
+                                                         rdfs:seeAlso "https://www.unmannedsystemstechnology.com/company/detect/dronewatcher/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_8843e8aa_a612_4578_8fef_e4efc18e0d1b
+:OWLNamedIndividual_8843e8aa_a612_4578_8fef_e4efc18e0d1b rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> ,
+                                                                  :Aircraft ,
+                                                                  :Helicopter ;
+                                                         rdfs:comment "The H125 (previously designated the AS350 B3e) outclasses all other single-engine helicopters for performance, versatility, low maintenance, and low acquisition costs, while also excelling in high-and-hot and extreme environments. It is a member of Airbus’ Ecureuil family, which has accumulated over 40 million flight hours worldwide." ;
+                                                         rdfs:label "Airbus H125"@en ;
+                                                         rdfs:seeAlso "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h125" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_a60a17ae_302f_4500_9ebc_4851bf38984c
+:OWLNamedIndividual_a60a17ae_302f_4500_9ebc_4851bf38984c rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/leahvaughan/ontologies/2022/5/AC#Rotorcraft> ,
+                                                                  :Helicopter ;
+                                                         rdfs:comment "The S-92® is the industry standard for commercial heavy lift off-shore transportation, search and rescue and executive/Head of State transport, including having been selected as the next platform to fly the President of the United States." ;
+                                                         rdfs:label "Sikorsky S-92"@en ;
+                                                         rdfs:seeAlso "https://www.lockheedmartin.com/en-us/products/commercial-aircraft.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_b13af3c8_fd5c_428a_9684_8be2398526b2
+:OWLNamedIndividual_b13af3c8_fd5c_428a_9684_8be2398526b2 rdf:type owl:NamedIndividual ,
+                                                                  :Aircraft_Manufacturer ,
+                                                                  :Manufacturer ;
+                                                         rdfs:comment "Airbus strives to provide the most efficient helicopter solutions to its customers who serve, protect, save lives and safely carry passengers in demanding environments. Its helicopters are in service across more than 150 countries worldwide, performing nearly every type of vertical flight task imaginable. The company’s product line offers the full spectrum of rotary-wing aircraft solutions for civil, government, military, law enforcement and parapublic uses." ;
+                                                         rdfs:label "Airbus"@en ;
+                                                         rdfs:seeAlso "https://www.airbus.com/en/products-services/helicopters" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#OWLNamedIndividual_bf7cd15f_21ee_4a64_866f_b9e2d64236a2
+:OWLNamedIndividual_bf7cd15f_21ee_4a64_866f_b9e2d64236a2 rdf:type owl:NamedIndividual ,
+                                                                  :Passive ,
+                                                                  :Radar ,
+                                                                  :Sensors ;
+                                                         rdfs:comment "A specialized radar system specifically designed to detect small drones at long ranges and overcome the limitations of visual-based solutions" ;
+                                                         rdfs:label "Retinar FAR-AD"@en ;
+                                                         rdfs:seeAlso "https://www.unmannedsystemstechnology.com/company/meteksan-defense/retinar-far-ad/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-11B_Raven
+:RQ-11B_Raven rdf:type owl:NamedIndividual ,
+                       :Group_1 ,
+                       :Large_UAS ,
+                       :Unmanned_Aircraft ;
+              rdfs:comment "In 1999, the U.S. Army bought four AeroVironment FQM-151 Pointer UAVs for the Military Operations in Urban Terrain (MOUT) ACTD (Advanced Concept Technology Demonstration) program. The Pointer system was found to be useful, but the ground control station was too large to be really man-portable. AeroVironment was therefore asked to develop a smaller station, and in turn the company also developed a smaller air vehicle, called Raven. It is about half the size of Pointer and a proof-of-concept vehicle, named the \"Flashlight\" SUAV (Small UAV), first flew in October 2001." ;
+              rdfs:label "RQ-11B Raven" ;
+              rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-11.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-15_Neptune
+:RQ-15_Neptune rdf:type owl:NamedIndividual ,
+                        :Group_3 ,
+                        :Large_UAS ,
+                        :Unmanned_Aircraft ;
+               rdfs:comment "The Neptune was developed by DRS Technologies as a Maritime UAV (MUAV), which is specially suited for operations over water. The RQ-15A is a mini-UAV powered by a small piston engine. It is transported in three easy to assemble parts in a container (183 x 76 x 51 cm3, 72\" x 30\" x 20\"), which can be transformed into the pneumatic zero-length launcher. The UAV design is optimized for water landings, using a high-mounted engine and payload bays protected from water intrusion. Over land, the Neptune can be recovered with a conventional landing or by parachute." ;
+               rdfs:label "RQ-15 Neptune" ;
+               rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-15.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-16A_T-Hawk
+:RQ-16A_T-Hawk rdf:type owl:NamedIndividual ,
+                        :Group_1 ,
+                        :Large_UAS ,
+                        :Unmanned_Aircraft ;
+               rdfs:comment "The T-Hawk backpackable UAV is to be used at platoon level for short-range surveillance, reconnaissance, target acquisition and battle management. The initial military evaluation focused on the detection of IEDs (Improvised Explosive Devices). The current design features two pods on the outside of the duct, which house flight control electronics, video camera, GPS receiver and radio." ;
+               rdfs:label "RQ-16A T-Hawk" ;
+               rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-16.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-4_Global_Hawk
+:RQ-4_Global_Hawk rdf:type owl:NamedIndividual ,
+                           :Group_5 ,
+                           :Large_UAS ,
+                           :Unmanned_Aircraft ;
+                  rdfs:comment "The Global Hawk is the U.S. Air Force's first operational UAV in the HAE (High Altitude Endurance) category. Its development began in 1994, when DARPA issued a request for proposals for their \"Tier II+\" HAE UAV requirement." ;
+                  rdfs:label "RQ-4 Global Hawk" ;
+                  rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-4.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-7B_Shadow
+:RQ-7B_Shadow rdf:type owl:NamedIndividual ,
+                       :Group_3 ,
+                       :Large_UAS ,
+                       :Unmanned_Aircraft ;
+              rdfs:comment "The RQ-7A is of the same twin-boom pusher layout as several other battlefield UAVs, like e.g. the RQ-2 Pioneer and the RQ-5 Hunter. It is powered by a UEL AR-741 rotary engine, and has a non-retractable tricycle landing gear for conventional wheeled take-off and landing. The RQ-7A can also be launched from a catapult and has a tailhook to catch arresting cables for a shorter landing run. RQ-7B is an improved version of the RQ-7A." ;
+              rdfs:label "RQ-7B Shadow" ;
+              rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-7.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Silver_Fox
+:Silver_Fox rdf:type owl:NamedIndividual ,
+                     :Group_2 ,
+                     :Large_UAS ,
+                     :Unmanned_Aircraft ;
+            rdfs:comment "Silver Fox is a small, tactical unmanned aircraft system (UAS) developed to meet a wide range of armed force mission needs. The drone’s mission capabilities include reconnaissance, intelligence, surveillance and target acquisition (RISTA), battle damage assessment, littoral operations, harbour security, convoy protection, and perimeter security. It can also be used for civilian applications such as research, scientific, monitoring, surveillance and security." ;
+            rdfs:label "Silver Fox" ;
+            rdfs:seeAlso "https://www.airforce-technology.com/projects/silver-fox-unmanned-aircraft-system/" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#WASP_III
+:WASP_III rdf:type owl:NamedIndividual ,
+                   :Group_1 ,
+                   :Large_UAS ,
+                   :Unmanned_Aircraft ;
+          rdfs:comment "Wasp is a hand-launched, recoverable flying-wing UAV, which uses synthetic materials that act both as a battery and as main wing structure. It is waterproof, and is recovered automatically by a horizontal landing on land or water. The UAV can fly for up to an hour, and is equipped with a GPS-based navigation system for fully autonomous missions. Wasp III is a larger version of the Wasp that is further optimized for cost-effective mass production and includes night vision (IR) capabilities." ;
+          rdfs:label "WASP III" ;
+          rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-12.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#XPV-1_Tern
+:XPV-1_Tern rdf:type owl:NamedIndividual ,
+                     :Group_3 ,
+                     :Large_UAS ,
+                     :Unmanned_Aircraft ;
+            rdfs:comment "The development of the Tern low-cost mini-UAV was originally begun by H-Cubed Corporation, but the program was acquired by BAI Aerosystems in 1993. Use by the U.S. military in the late 1990s was limited to a few examples for research purposes. Tern UAVs were modified by the U.S. Army for fiber-optic guidance to act as a surrogate fiber-optic guided missile (FOG-M). Other Army research Terns evaluated NBC (Nuclear/Biological/Chemical) sensor payloads. In 2001, the Tern was modified into the XPV-1 tactical UAV for special operations." ;
+            rdfs:label "XPV-1 Tern" ;
+            rdfs:seeAlso "https://www.designation-systems.net/dusrm/app4/tern.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#XPV-2_Mako
+:XPV-2_Mako rdf:type owl:NamedIndividual ,
+                     :Group_3 ,
+                     :Large_UAS ,
+                     :Unmanned_Aircraft ;
+            rdfs:comment "The XPV-2 Mako UAV was developed by Navmar Applied Sciences Corp. as a low-cost long-endurance tactical mini-UAV. 30 UAVs were procured by the U.S. Special Operations Command, and were successfully used during Operation Iraqi Freedom. The Mako is cheap enough to be expendable, if the tactical or logistical situation favours discarding the air vehicle." ;
+            rdfs:label "XPV-2 Mako" ;
+            rdfs:seeAlso "https://www.designation-systems.net/dusrm/app4/mako.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aqua/Terra_Puma
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Aqua/Terra_Puma> rdf:type owl:NamedIndividual ,
+                                                                                   :Group_1 ,
+                                                                                   :Large_UAS ,
+                                                                                   :Unmanned_Aircraft ;
+                                                                          rdfs:comment "The Puma (Pointer Upgraded Mission Ability) UAV, which has been in development since 2001, is a significantly upgraded development of the FQM-151 Pointer using proven technologies from the RQ-11 Raven." ;
+                                                                          rdfs:label "Aqua/Terra Puma" ;
+                                                                          rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-20.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-1A/B/C_Predator
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#MQ-1A/B/C_Predator> rdf:type owl:NamedIndividual ,
+                                                                                      :Group_4 ,
+                                                                                      :Large_UAS ,
+                                                                                      :Unmanned_Aircraft ;
+                                                                             rdfs:comment "The Predator is the U.S. Air Force's first operational tactical multimission UAV." ;
+                                                                             rdfs:label "MQ-1A/B/C Predator" ;
+                                                                             rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-1.html" .
+
+
+###  http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-14A/B_Dragon_Eye/Swift
+<http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#RQ-14A/B_Dragon_Eye/Swift> rdf:type owl:NamedIndividual ,
+                                                                                             :Group_1 ,
+                                                                                             :Large_UAS ,
+                                                                                             :Unmanned_Aircraft ;
+                                                                                    rdfs:comment """A Dragon Eye system consists of the three UAVs and the ground control equipment. All components are light-weight (2.7 kg (5.9 lb) for one UAV, 5.4 kg (12 lb) for the ground control station) and are carried in a soldier's backpack. The air vehicle is powered by two electric motors which drive wing-mounted propellers. It is launched either by hand or with the help of a bungee cord, and is recovered by an autopilot-controlled belly landing. Swift is an upgraded version of Dragon Eye.
+
+Dragon Eye: RQ-14A
+Swift: RQ-14B""" ;
+                                                                                    rdfs:label "RQ-14 A/B Dragon Eye/Swift" ;
+                                                                                    rdfs:seeAlso "https://www.designation-systems.net/dusrm/app2/q-14.html" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Alpha_Airspace>
+                <http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Bravo_Airspace>
+                <http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Charlie_Airspace>
+                <http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Delta_Airspace>
+                <http://www.semanticweb.org/matt/ontologies/2023/1/NAS#Class_Echo_Airspace>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AIRMET
+                :Central_Weather_Advisory
+                :Convective_SIGMET
+                :SIGMET
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ASPM
+                :METAR
+                :TAF
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Aborted_Landing_After_Touchdown
+                :Flare
+                :Landing_Roll
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alert_Area
+                :Controlled_Firing_Area
+                :Military_Operation_Area
+                :National_Security_Area
+                :Prohibited_Area
+                :Restricted_Area
+                :Warning_Area
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Approach
+                :Emergency_Descent
+                :En-route
+                :Initial-climb
+                :Landing
+                :Maneuvering
+                :Post_Impact
+                :Standing
+                :Takeoff
+                :Taxi
+                :Uncontrolled_Descent
+                :Unknown
+                <http://www.semanticweb.org/matt/ontologies/2024/2/ISSTO#Pushback/towing>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Change_of_Cruise_Level
+                :Climb_to_Cruise
+                :Cruise
+                :Descent
+                :Holding
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Chase_Aircraft
+                :Operational_Volume
+                <http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Intruder>
+                <http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Ownship>
+                <http://www.semanticweb.org/rag315/ontologies/2023/0/OPS#Personnel>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Class_B_Airspace_VFR_Trainsition_Routes
+                :VFR_Corridors
+                :VFR_Flyways
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Controlled_Airspace
+                :Other_Airspace
+                :Special_Use_Airspace
+                :Uncontrolled_Airspace
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cyber_Takeover
+                :High_Energy
+                :Jammers
+                :Kinetic
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Group_1
+                :Group_2
+                :Group_3
+                :Group_4
+                :Group_5
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Gyrodyne
+                :Gyroplane
+                :Helicopter
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Intelligence_Analyst
+                :Sensor_Operator
+                :Visual_Observer
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Part_61
+                :Part_63
+                :Part_65
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Power_Back
+                :Taxi_from_Runway
+                :Taxi_to_Runway
+                :Taxi_to_Takeoff_Position
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Sky_Condition
+                :Surface_Wind_Condition
+                :Visibility_Condition
+                :Weather_Condition
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC>
+                <https://data.nasa.gov/ontologies/atmonto/NAS#ATCSCC>
+                <https://data.nasa.gov/ontologies/atmonto/NAS#ATCT>
+                <https://data.nasa.gov/ontologies/atmonto/NAS#Airport>
+                <https://data.nasa.gov/ontologies/atmonto/NAS#TRACON>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
